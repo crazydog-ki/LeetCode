@@ -6,76 +6,61 @@
 using namespace std;
 
 #include <vector>
-#include <unordered_map>
+#include <map>
 #include "tools.h"
 
-#pragma mark - 方法三: 相撞指针
-vector<int> twoSum3(vector<int> &nums, int target) {
-    // 1. 对未排序数组copy, 便于后续找到对应的索引
-    vector<int> copyNums(nums);
-    // 2. 数组排序
-    sort(nums.begin(), nums.end());
-    // 3. 构建相撞指针, 保存v1,v2
-    int start = 0; int end = (int)nums.size() - 1;
-    int v1 = 0; int v2 = 0;
-    while (start < end) {
-        if (nums[start] + nums[end] == target) {
-            v1 = nums[start];
-            v2 = nums[end];
+/**两数之和
+ 1. 给定一个整数数组nums和一个整数目标值target，请你在该数组中找出和为目标值 的那两个整数，并返回它们的数组下标。
+
+ 2. 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+ 
+ 3. 你可以按任意顺序返回答案。
+ */
+#pragma mark - 方法1-两次遍历+哈希
+vector<int> twoSum1(vector<int>& nums, int target) {
+    unsigned long count = nums.size();
+    if (count < 2) return {};
+    
+    vector<int> res(2, -1); // 只有两个元素
+    // 1、构造 myMap[value]=index
+    map<int, int> myMap;
+    for (int i = 0; i < count; i++) {
+        myMap[nums[i]] = i;
+    }
+    
+    // 2、遍历数组，找到结果提前跳出
+    for (int i = 0; i < count; i++) {
+        int key = target - nums[i];
+        if (myMap.count(key) && myMap[key]!=i) { // 元素重复
+            res[0] = myMap[key];
+            res[1] = i;
             break;
         }
-        else if (nums[start] + nums[end] < target) start++;
-        else end--;
-    }
-    // 4. 索引结果push到结果数组中
-    vector<int> res;
-    for (int i = 0; i < copyNums.size(); i++) {
-        if (copyNums[i] == v1 || copyNums[i] == v2) res.push_back(i);
     }
     return res;
 }
 
-#pragma mark - 方法二: 哈希+一次遍历
-vector<int> twoSum2(vector<int> &nums, int target) {
-    unordered_map<int, int> myMap;
-    int count = (int)nums.size();
+#pragma mark - 方法2-一次遍历+哈希
+vector<int> twoSum2(vector<int>& nums, int target) {
+    unsigned long count = nums.size();
+    if (count < 2) return {};
     
-    vector<int> res;
+    vector<int> res(2, -1);
+    map<int, int> myMap;
     for (int i = 0; i < count; i++) {
-        // 判断<i的序列中是否存在nums[j] == target-nums[i]
-        if (myMap.find(target-nums[i]) != myMap.end()) {
-            res.push_back(myMap[target-nums[i]]);
-            res.push_back(i);
-            return res;
+        int key = target - nums[i];
+        if (myMap.count(key)) {
+            res[0] = myMap[key];
+            res[1] = i;
+            break;
         }
         myMap[nums[i]] = i;
-    }
-    return res;
-}
-
-#pragma mark - 方法一: 哈希表, 以数组元素为key, 数组索引为value => 两次遍历
-vector<int> twoSum(vector<int> &nums, int target) {
-    unordered_map<int, int> myMap;
-    int count = (int)nums.size();
-    
-    // 1. 构建map, 以数组元素为key, 数组索引为value
-    for (int i = 0; i < count; i++) {
-        myMap[nums[i]] = i;
-    }
-    // 2. 二次遍历, 需避免使用同一个元素的case(这里重点考虑key相同的情况，能否符合要求？[1, 5, 5, 7], target=10)
-    vector<int> res = {};
-    for (int j = 0; j < count; j++) {
-        if (myMap.find(target-nums[j]) != myMap.end() && myMap[target-nums[j]] != j) {
-            res.push_back(j);
-            res.push_back(myMap[target-nums[j]]);
-            return res;
-        }
     }
     return res;
 }
 
 void test() {
-    vector<int> nums = {1, 5, 5, 7};
-    vector<int> res = twoSum(nums, 10);
+    vector<int> nums = {3, 2, 4};
+    vector<int> res = twoSum2(nums, 6);
     printVectors(res);
 }
