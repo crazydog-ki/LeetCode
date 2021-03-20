@@ -1,6 +1,6 @@
 // Created by CoderJX
 // Email  : jxyou.ki@gmail.com
-// Github : https://github.com/CoderJX
+// https://github.com/Irving-yjx
 
 #include <iostream>
 using namespace std;
