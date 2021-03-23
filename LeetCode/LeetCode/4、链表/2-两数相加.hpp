@@ -6,84 +6,89 @@
 using namespace std;
 
 #include <vector>
+#include "tools.h"
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
-#pragma mark - 方法二: 改进版
-ListNode * addTwoNumbers(ListNode *l1, ListNode *l2) {
-    ListNode *head = new ListNode(0);
-    ListNode *cur = head;
-    int upNum = 0, sum = 0;
-    while (l1 || l2) {
-        sum = (l1?l1->val:0) + (l2?l2->val:0) + upNum;
-        cur->val = sum % 10;
-        upNum = sum / 10;
-        l1 = l1 ? l1->next : NULL;
-        l2 = l2 ? l2->next : NULL;
-        if (l1 || l2) {
-            cur->next = new ListNode(0);
-            cur = cur->next;
-        }
+/**两数相加
+ 1. 两个非空的链表，表示两个非负整数。它们每位数字都是按照逆序方式存储的，并且每个节点只能存储一位数字。
+ 2. 请你将两个数相加，并以相同形式返回一个表示和的链表。
+ 3. 你可以假设除了数字0之外，这两个数都不会以0开头。
+ */
+#pragma mark - 方法1-短链对齐补零
+ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
+    int len1 = 1, len2 = 1;
+    ListNode *ptr1 = l1, *ptr2 = l2;
+    
+    // 获取链表长度
+    while (ptr1->next) {
+        len1++;
+        ptr1 = ptr1->next;
     }
-    if (upNum) cur->next = new ListNode(1);
-    return head;
+    while (ptr2->next) {
+        len2++;
+        ptr2 = ptr2->next;
+    }
+    
+    // 短链末尾补零
+    int delta = (len1 <= len2) ? len2-len1 : len1-len2;
+    ListNode *tmpPtr = (len1 <= len2) ? ptr1 : ptr2;
+    while (delta--) {
+        tmpPtr->next = new ListNode(0);
+        tmpPtr = tmpPtr->next;
+    }
+    
+    // 指针复位
+    ptr1 = l1;
+    ptr2 = l2;
+    
+    ListNode *resPtr = new ListNode(-1);
+    ListNode *curPtr = resPtr;
+    int count = 0; // 记录进位, 1代表进位, 0代表不进位
+    int sum = 0; // 记录相加结果
+    while (ptr1 && ptr2) {
+        sum = count + ptr1->val + ptr2->val;
+        curPtr->next = new ListNode(sum % 10);
+        curPtr = curPtr->next;
+        ptr1 = ptr1->next;
+        ptr2 = ptr2->next;
+        count = (9<sum) ? 1 : 0;
+    }
+    
+    if (count) { // 最后还有进位
+        curPtr->next = new ListNode(1);
+        curPtr = curPtr->next;
+    }
+    
+    return resPtr->next;
 }
 
-#pragma mark - 方法一: 数组存储 => 构造链表
-ListNode * addTwoNumbers1(ListNode *l1, ListNode *l2) {
-    bool isUpBit = false;
-    int tmpNum = 0;
-    vector<int> nums;
-    while (l1!=NULL || l2!=NULL) {
-        if (l1 == NULL) l1 = new ListNode(0);
-        if (l2 == NULL) l2 = new ListNode(0);
-        tmpNum = l1->val+l2->val;
-        if (tmpNum<10 && !isUpBit) nums.push_back(tmpNum); // 小于10不进位
-        else if (10<=tmpNum && !isUpBit) { // 大于10不进位
-            nums.push_back(tmpNum-10);
-            isUpBit = true;
-        } else if (tmpNum<9 && isUpBit) { // 小于9进位
-            nums.push_back(tmpNum+1);
-            isUpBit = false;
-        } else if (9<=tmpNum && isUpBit) { // 大于9进位
-            nums.push_back(tmpNum-9);
-        }
-        l1 = l1->next;
-        l2 = l2->next;
+#pragma mark - 方法2-短链不对齐补零
+ListNode* addTwoNumbers2(ListNode* l1, ListNode* l2) {
+    ListNode *resPtr = new ListNode(-1);
+    ListNode *curPtr = resPtr;
+    int carry = 0;
+    while (l1 || l2 || carry) {
+        if (l1) {carry += l1->val; l1 = l1->next;}
+        if (l2) {carry += l2->val; l2 = l2->next;}
+        curPtr = curPtr->next = new ListNode(carry % 10);
+        carry /= 10; // 记录进位
     }
-    if (isUpBit) nums.push_back(1);
-    ListNode *head = new ListNode(nums[0]);
-    ListNode *cur = head;
-    for (int i = 1; i < nums.size(); i++) {
-        cur->next = new ListNode(nums[i]);
-        cur = cur->next;
-    }
-    return head;
+    
+    return resPtr->next;
 }
 
 void test() {
     ListNode *l1 = new ListNode(2);
     ListNode *l2 = new ListNode(4);
     ListNode *l3 = new ListNode(3);
-//    ListNode *l1 = new ListNode(5);
-//    ListNode *l2 = new ListNode(4);
-//    ListNode *l3 = new ListNode(5);
     l1->next = l2;
     l2->next = l3;
     
     ListNode *l4 = new ListNode(5);
     ListNode *l5 = new ListNode(6);
-    ListNode *l6 = new ListNode(4);
-//    ListNode *l4 = new ListNode(6);
-//    ListNode *l5 = new ListNode(7);
-//    ListNode *l6 = new ListNode(8);
-//    ListNode *l7 = new ListNode(1);
+    ListNode *l6 = new ListNode(9);
     l4->next = l5;
     l5->next = l6;
-//    l6->next = l7;
-    addTwoNumbers(l1, l4);
+    
+    ListNode *resPtr = addTwoNumbers2(l1, l4);
+    printNode(resPtr);
 }

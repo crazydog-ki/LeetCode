@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#include "1-两数之和.hpp"
+#include "2-两数相加.hpp"
 
 int main(int argc, const char * argv[]) {
     test();
