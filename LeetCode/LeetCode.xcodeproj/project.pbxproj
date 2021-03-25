@@ -48,6 +48,7 @@
 		1271DA0723322B4B00E3DA62 /* 63-不同路径 II.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "63-不同路径 II.hpp"; sourceTree = "<group>"; };
 		1271DA0A23322E8A00E3DA62 /* 64-最小路径和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "64-最小路径和.hpp"; sourceTree = "<group>"; };
 		1271DA0D2332334300E3DA62 /* 70-爬楼梯.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "70-爬楼梯.hpp"; sourceTree = "<group>"; };
+		1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		12772BAE230B9BC500BFA1D0 /* 283-移动零.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "283-移动零.hpp"; sourceTree = "<group>"; };
 		12772BB1230BA2AA00BFA1D0 /* 414-第三大的数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "414-第三大的数.hpp"; sourceTree = "<group>"; };
 		127B93BA2314D42A007A1DBD /* 20-有效的括号.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "20-有效的括号.hpp"; sourceTree = "<group>"; };
@@ -261,6 +262,7 @@
 		124F1E6A232A8FE200E7C090 /* 10、字符串 */ = {
 			isa = PBXGroup;
 			children = (
+				1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */,
 			);
 			path = "10、字符串";
 			sourceTree = "<group>";
