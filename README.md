@@ -1,2 +1,2 @@
 # LeetCode
-Solve algorithmic questions deeply
+Solve algorithmic questions of LeetCode deeply
