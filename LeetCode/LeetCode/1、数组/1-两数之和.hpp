@@ -10,7 +10,7 @@ using namespace std;
 #include "tools.h"
 
 /**两数之和
- 1. 给定一个整数数组nums和一个整数目标值target，请你在该数组中找出和为目标值 的那两个整数，并返回它们的数组下标。
+ 1. 给定一个整数数组nums和一个整数目标值target，请你在该数组中找出和为目标值的那两个整数，并返回它们的数组下标。
 
  2. 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
  
@@ -18,7 +18,7 @@ using namespace std;
  */
 #pragma mark - 方法1-两次遍历+哈希
 vector<int> twoSum1(vector<int>& nums, int target) {
-    unsigned long count = nums.size();
+    int count = (int)nums.size();
     if (count < 2) return {};
     
     vector<int> res(2, -1); // 只有两个元素
@@ -42,7 +42,7 @@ vector<int> twoSum1(vector<int>& nums, int target) {
 
 #pragma mark - 方法2-一次遍历+哈希
 vector<int> twoSum2(vector<int>& nums, int target) {
-    unsigned long count = nums.size();
+    int count = (int)nums.size();
     if (count < 2) return {};
     
     vector<int> res(2, -1);

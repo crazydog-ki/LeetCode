@@ -16,7 +16,7 @@ using namespace std;
  */
 #pragma mark - 方法1-哈希+滑动窗口
 int lengthOfLongestSubstring1(string s) {
-    unsigned long len = s.length();
+    int len = (int)s.length();
     int left = 0, maxLen = 0;
     unordered_set<char> lookup;
     for (int i = 0; i < len; i++) {
@@ -32,7 +32,7 @@ int lengthOfLongestSubstring1(string s) {
 
 #pragma mark - 方法2-哈希+滑动窗口优化
 int lengthOfLongestSubstring2(string s) {
-    unsigned long len = s.length();
+    int len = (int)s.length();
     int left = 0, maxLen = 0;
     map<char, int> myMap;
     for (int i = 0; i < len; i++) {
@@ -47,7 +47,7 @@ int lengthOfLongestSubstring2(string s) {
 
 #pragma mark - 方法3-桶数组
 int lengthOfLongestSubstring3(string s) {
-    unsigned long len = s.length();
+    int len = (int)s.length();
     int left = 0, maxLen = 0;
     int *lookup = new int[128];
     for (int i = 0; i < len; i++) {
