@@ -66,6 +66,7 @@
 		1281D525230544D3009013FA /* 122-买卖股票的最佳时机 II.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "122-买卖股票的最佳时机 II.hpp"; sourceTree = "<group>"; };
 		1285F0D02337C35B00F1254D /* 21-合并两个有序链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "21-合并两个有序链表.hpp"; sourceTree = "<group>"; };
 		1285F0D32337CBEF00F1254D /* 23-合并K个排序链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "23-合并K个排序链表.hpp"; sourceTree = "<group>"; };
+		12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-Z 字形变换.hpp"; sourceTree = "<group>"; };
 		128F524423790DD3000B07CE /* 41-缺失的第一个正数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "41-缺失的第一个正数.hpp"; sourceTree = "<group>"; };
 		129A4DED2372BCED0007DC43 /* 33-搜索旋转排序数组.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "33-搜索旋转排序数组.hpp"; sourceTree = "<group>"; };
 		12A2FCC7236C1D8B0081FE5C /* 16-最接近的三数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "16-最接近的三数之和.hpp"; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 			children = (
 				1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */,
 				12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */,
+				12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */,
 			);
 			path = "10、字符串";
 			sourceTree = "<group>";

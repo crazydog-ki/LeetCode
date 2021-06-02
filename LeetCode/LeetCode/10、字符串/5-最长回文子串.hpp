@@ -1,4 +1,4 @@
-// Created by CoderJX
+// Created by Irving_yjx
 // Email  : jxyou.ki@gmail.com
 // Github : https://github.com/Irving-yjx
 
@@ -14,45 +14,99 @@ using namespace std;
  （1）1 <= s.length <= 1000
  （2）s仅由数字和英文字母（大写和/或小写）组成
  */
-#pragma mark - 方法5-Manacher"马拉车"算法优化
-string longestPalindrome5(string s) {
-    // 字符串预处理，保证总长为奇数
-    string concatStr;
-    for (char ch : s) {
-        concatStr += "#";
-        concatStr += ch;
+#pragma mark - 方法1-中心扩散
+string centerSpread(string s, int left, int right) {
+    int len = (int)s.size();
+    while (0<=left && right<=len-1) {
+        if (s[left] == s[right]) {
+            left--;
+            right++;
+        } else break;
     }
-    concatStr += "#";
+    // 跳出时，left多减1，right多加1
+    return s.substr(left+1, right-left-1);
+}
+
+string longestPalindrome1(string s) {
+    int len = (int)s.size();
     
-    int len = (int)concatStr.length();
-    
-    // maxRight为当前访问到的所有回文子串，所能触及的最右一个字符的位置
-    int center = 0, maxRight = 0;
-    // 记录最长回文串的位置、长度
-    int startIndex = 0, maxLen = 0;
-    vector<int> p(len, 0);
+    int maxLen = 1;
+    string resStr = s.substr(0, 1);
     for (int i = 0; i < len; i++) {
-        p[i] = i<maxRight ? min(p[2*center-i], maxRight-i) : 1;
-        
-        // 尝试扩展p[i]，注意处理边界
-        while (0<=i-p[i] &&
-               i+p[i]<len &&
-               concatStr[i-p[i]]==concatStr[i+p[i]]) p[i]++;
-        
-        // 更新center、maxRight
-        if (maxRight < i+p[i]-1) { // p[i]-1为回文半径
-            center = i;
-            maxRight = i+p[i]-1;
-        }
-        
-        // 更新最长回文子串位置、长度
-        if (maxLen <= p[i]-1) {
-            maxLen = p[i]-1;
-            startIndex = (i-maxLen)/2;
+        string oneMidStr = centerSpread(s, i, i);  // 一个数为中心点
+        string twoMidStr = centerSpread(s, i, i+1);// 两个数为中心点
+        string tmpMaxStr = oneMidStr.size() < twoMidStr.size() ?
+                           twoMidStr : oneMidStr;
+        if (maxLen < tmpMaxStr.size()) {
+            maxLen = (int)tmpMaxStr.size();
+            resStr = tmpMaxStr;
         }
     }
     
-    return s.substr(startIndex, maxLen);
+    return resStr;
+}
+
+#pragma mark - 方法2-中心扩散优化版
+string longestPalindrome2(string s) {
+    int len = (int)s.size();
+    int maxLen = 1;
+    string resStr = s.substr(0, 1);
+    for (int i = 0; i < len; i++) {
+        // 1个中心点
+        int j = i, k = 1; // k代表距离中心点的距离
+        while (j < len) {
+            if (len-1<j+k || j-k<0 || s[j-k]!=s[j+k]) break;
+            k++; // 继续探索
+        }
+        if (maxLen < 2*k-1) {
+            maxLen = 2*k-1;
+            resStr = s.substr(j-k+1, 2*k-1);
+        }
+        
+        // 2个中心点
+        k = 1;
+        if (len-1<j+k || s[j]!=s[j+1]) continue;
+        while (j < len) {
+            if (len-1<j+k+1 || j-k<0 || s[j-k]!=s[j+1+k]) break;
+            k++;
+        }
+        if (maxLen < 2*k) {
+            maxLen = 2*k;
+            resStr = s.substr(j-k+1, 2*k);
+        }
+    }
+    
+    return resStr;
+}
+
+#pragma mark - 方法3-动态规划
+/*
+ 状态转移：在头尾字符相等的前提下，内部子串的回文性质就决定了整个串的回文性质
+ 状态转移方程：dp[i][j]表示s[i...j]是否为回文串，可得：
+            dp[i][j] == (s[i]==s[j]) && dp[i+1][j-1]
+ */
+string longestPalindrome3(string s) {
+    int len = (int)s.size();
+    vector<vector<bool>> dp(len, vector<bool>(len));
+    string resStr = s.substr(0, 1);
+    for (int l = 0; l < len; l++) { // 截取长度
+        for (int i = 0; i+l < len; i++) {
+            int j = i+l;
+            if (l==0) { // 单个字符
+                dp[i][j] = true;
+            } else if (l==1) { // 邻近两个字符
+                dp[i][j] = (s[i]==s[j]);
+            } else {
+                dp[i][j] = (s[i]==s[j]) && dp[i+1][j-1];
+            }
+            
+            if (dp[i][j] && resStr.size() < l+1) {
+                resStr = s.substr(i, l+1);
+            }
+        }
+    }
+    
+    return resStr;
 }
 
 #pragma mark - 方法4-Manacher"马拉车"算法
@@ -107,99 +161,45 @@ string longestPalindrome4(string s) {
     return s.substr(start, maxLen);
 }
 
-#pragma mark - 方法3-动态规划
-/*
- 状态转移：在头尾字符相等的前提下，内部子串的回文性质就决定了整个串的回文性质
- 状态转移方程：dp[i][j]表示s[i...j]是否为回文串，可得：
-            dp[i][j] == (s[i]==s[j]) && dp[i+1][j-1]
- */
-string longestPalindrome3(string s) {
-    int len = (int)s.size();
-    vector<vector<bool>> dp(len, vector<bool>(len));
-    string resStr = s.substr(0, 1);
-    for (int l = 0; l < len; l++) { // 截取长度
-        for (int i = 0; i+l < len; i++) {
-            int j = i+l;
-            if (l==0) { // 单个字符
-                dp[i][j] = true;
-            } else if (l==1) { // 邻近两个字符
-                dp[i][j] = (s[i]==s[j]);
-            } else {
-                dp[i][j] = (s[i]==s[j]) && dp[i+1][j-1];
-            }
-            
-            if (dp[i][j] && resStr.size() < l+1) {
-                resStr = s.substr(i, l+1);
-            }
-        }
+#pragma mark - 方法5-Manacher"马拉车"算法优化
+string longestPalindrome5(string s) {
+    // 字符串预处理，保证总长为奇数
+    string concatStr;
+    for (char ch : s) {
+        concatStr += "#";
+        concatStr += ch;
     }
+    concatStr += "#";
     
-    return resStr;
-}
-
-#pragma mark - 方法2-中心扩散优化版
-string longestPalindrome2(string s) {
-    int len = (int)s.size();
-    int maxLen = 1;
-    string resStr = s.substr(0, 1);
+    int len = (int)concatStr.length();
+    
+    // maxRight为当前访问到的所有回文子串，所能触及的最右一个字符的位置
+    int center = 0, maxRight = 0;
+    // 记录最长回文串的位置、长度
+    int startIndex = 0, maxLen = 0;
+    vector<int> p(len, 0);
     for (int i = 0; i < len; i++) {
-        // 1个中心点
-        int j = i, k = 1; // k代表距离中心点的距离
-        while (j < len) {
-            if (len-1<j+k || j-k<0 || s[j-k]!=s[j+k]) break;
-            k++; // 继续探索
-        }
-        if (maxLen < 2*k-1) {
-            maxLen = 2*k-1;
-            resStr = s.substr(j-k+1, 2*k-1);
+        p[i] = i<maxRight ? min(p[2*center-i], maxRight-i) : 1;
+        
+        // 尝试扩展p[i]，注意处理边界
+        while (0<=i-p[i] &&
+               i+p[i]<len &&
+               concatStr[i-p[i]]==concatStr[i+p[i]]) p[i]++;
+        
+        // 更新center、maxRight
+        if (maxRight < i+p[i]-1) { // p[i]-1为回文半径
+            center = i;
+            maxRight = i+p[i]-1;
         }
         
-        // 2个中心点
-        k = 1;
-        if (len-1<j+k || s[j]!=s[j+1]) continue;
-        while (j < len) {
-            if (len-1<j+k+1 || j-k<0 || s[j-k]!=s[j+1+k]) break;
-            k++;
-        }
-        if (maxLen < 2*k) {
-            maxLen = 2*k;
-            resStr = s.substr(j-k+1, 2*k);
+        // 更新最长回文子串位置、长度
+        if (maxLen <= p[i]-1) {
+            maxLen = p[i]-1;
+            startIndex = (i-maxLen)/2;
         }
     }
     
-    return resStr;
-}
-
-#pragma mark - 方法1-中心扩散
-string centerSpread(string s, int left, int right) {
-    int len = (int)s.size();
-    while (0<=left && right<=len-1) {
-        if (s[left] == s[right]) {
-            left--;
-            right++;
-        } else break;
-    }
-    // 跳出时，left多减1，right多加1
-    return s.substr(left+1, right-left-1);
-}
-
-string longestPalindrome1(string s) {
-    int len = (int)s.size();
-    
-    int maxLen = 1;
-    string resStr = s.substr(0, 1);
-    for (int i = 0; i < len; i++) {
-        string oneMidStr = centerSpread(s, i, i);  // 一个数为中心点
-        string twoMidStr = centerSpread(s, i, i+1);// 两个数为中心点
-        string tmpMaxStr = oneMidStr.size() < twoMidStr.size() ?
-                           twoMidStr : oneMidStr;
-        if (maxLen < tmpMaxStr.size()) {
-            maxLen = (int)tmpMaxStr.size();
-            resStr = tmpMaxStr;
-        }
-    }
-    
-    return resStr;
+    return s.substr(startIndex, maxLen);
 }
 
 void test() {
