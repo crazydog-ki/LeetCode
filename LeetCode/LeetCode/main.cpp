@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#include "6-Z 字形变换.hpp"
+#include "7-整数反转.hpp"
 
 int main(int argc, const char * argv[]) {
     test();

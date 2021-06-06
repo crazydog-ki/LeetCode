@@ -110,6 +110,7 @@
 		12DD8B79230A4DF0001F4364 /* 219-存在重复元素 II.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "219-存在重复元素 II.hpp"; sourceTree = "<group>"; };
 		12DD8B7C230A7E32001F4364 /* 268-缺失数字.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "268-缺失数字.hpp"; sourceTree = "<group>"; };
 		12F04FD1230F9174007D235B /* 448-找到所有数组中消失的数字.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "448-找到所有数组中消失的数字.hpp"; sourceTree = "<group>"; };
+		12F48244266D37D800E2885F /* 7-整数反转.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "7-整数反转.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +161,7 @@
 				124F1E6D232A902300E7C090 /* 13、dfs深度搜索 */,
 				124F1E6E232A903F00E7C090 /* 14、bfs广度搜索 */,
 				124F1E6F232A905700E7C090 /* 15、贪心 */,
+				12F48243266D37D800E2885F /* 16、数学 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -350,6 +352,14 @@
 				127D70BB2320F79A00350828 /* 933-最近的请求次数.hpp */,
 			);
 			path = "3、队列";
+			sourceTree = "<group>";
+		};
+		12F48243266D37D800E2885F /* 16、数学 */ = {
+			isa = PBXGroup;
+			children = (
+				12F48244266D37D800E2885F /* 7-整数反转.hpp */,
+			);
+			path = "16、数学";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
