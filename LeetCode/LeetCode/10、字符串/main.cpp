@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-#include "7-整数反转.hpp"
+#include "8-字符串转换整数 (atoi).h"
 
 int main(int argc, const char * argv[]) {
     test();
