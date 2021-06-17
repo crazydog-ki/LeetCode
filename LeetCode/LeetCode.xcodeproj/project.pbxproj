@@ -44,6 +44,7 @@
 		125ACBF72330B7F300348AA4 /* 44-通配符匹配.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "44-通配符匹配.hpp"; sourceTree = "<group>"; };
 		125D7F2B26726FCB00BC6CD7 /* 8-字符串转换整数 (atoi).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "8-字符串转换整数 (atoi).h"; sourceTree = "<group>"; };
 		1261085D2333C767004F3C09 /* 2-两数相加.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "2-两数相加.hpp"; sourceTree = "<group>"; };
+		1262AC80267B97B000859AFB /* 9-回文数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "9-回文数.hpp"; sourceTree = "<group>"; };
 		1271DA012332274300E3DA62 /* 53-最大子序和-动态规划.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "53-最大子序和-动态规划.hpp"; sourceTree = "<group>"; };
 		1271DA04233228B900E3DA62 /* 62-不同路径.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "62-不同路径.hpp"; sourceTree = "<group>"; };
 		1271DA0723322B4B00E3DA62 /* 63-不同路径 II.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "63-不同路径 II.hpp"; sourceTree = "<group>"; };
@@ -313,7 +314,6 @@
 				12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */,
 				12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */,
 				125D7F2B26726FCB00BC6CD7 /* 8-字符串转换整数 (atoi).h */,
-				1215668D22CB4A300067C003 /* main.cpp */,
 			);
 			path = "10、字符串";
 			sourceTree = "<group>";
@@ -360,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				12F48244266D37D800E2885F /* 7-整数反转.hpp */,
+				1262AC80267B97B000859AFB /* 9-回文数.hpp */,
+				1215668D22CB4A300067C003 /* main.cpp */,
 			);
 			path = "16、数学";
 			sourceTree = "<group>";
