@@ -1,6 +1,6 @@
-// Created by Irving_yjx
+// Created by crazydog-ki
 // Email  : jxyou.ki@gmail.com
-// Github : https://github.com/Irving-yjx
+// Github : https://github.com/crazydog-ki
 
 #include <vector>
 
