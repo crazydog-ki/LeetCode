@@ -19,7 +19,7 @@ using namespace std;
  （6）-106 <= nums1[i], nums2[i] <= 106
  */
 #pragma mark - 方法1-数组合并
-double findMedianSortedArrays1(vector<int> &nums1, vector<int> &nums2) {
+double findMedianSortedArrays1(vector<int>& nums1, vector<int>& nums2) {
     int m = (int)nums1.size();
     int n = (int)nums2.size();
     int i = 0, j = 0;
@@ -42,7 +42,7 @@ double findMedianSortedArrays1(vector<int> &nums1, vector<int> &nums2) {
 }
 
 #pragma mark - 方法2-归并排序优化版
-double findMedianSortedArrays2(vector<int> &nums1, vector<int> &nums2) {
+double findMedianSortedArrays2(vector<int>& nums1, vector<int>& nums2) {
     int m = (int)nums1.size();
     int n = (int)nums2.size();
     int totalLen = m + n;
@@ -62,10 +62,10 @@ double findMedianSortedArrays2(vector<int> &nums1, vector<int> &nums2) {
 }
 
 #pragma mark - 方法3-二分法
-int getKth(vector<int> &nums1,
+int getKth(vector<int>& nums1,
            int start1,
            int end1,
-           vector<int> &nums2,
+           vector<int>& nums2,
            int start2,
            int end2,
            int k) {
@@ -88,7 +88,7 @@ int getKth(vector<int> &nums1,
     }
 }
 
-double findMedianSortedArrays3(vector<int> &nums1, vector<int> &nums2) {
+double findMedianSortedArrays3(vector<int>& nums1, vector<int>& nums2) {
     int len1 = (int)nums1.size();
     int len2 = (int)nums2.size();
     int left = (len1+len2+1) / 2;
@@ -97,7 +97,7 @@ double findMedianSortedArrays3(vector<int> &nums1, vector<int> &nums2) {
 }
 
 #pragma mark - 方法4-二分法优化
-double findMedianSortedArrays4(vector<int> &nums1, vector<int> &nums2) {
+double findMedianSortedArrays4(vector<int>& nums1, vector<int>& nums2) {
     int len1 = (int)nums1.size();
     int len2 = (int)nums2.size();
     // 保证nums1为短数组
