@@ -27,7 +27,6 @@ void printNode(ListNode *head) {
     cout << endl;
 }
 
-
 #pragma mark - 二叉树
 struct TreeNode {
     int val;
@@ -35,7 +34,6 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-
 
 #pragma mark - tip1 => 字符串数字相互转化
 /*
