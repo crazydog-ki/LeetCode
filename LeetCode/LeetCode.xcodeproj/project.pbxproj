@@ -32,6 +32,7 @@
 		125D7F2B26726FCB00BC6CD7 /* 8-字符串转换整数 (atoi).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "8-字符串转换整数 (atoi).h"; sourceTree = "<group>"; };
 		1261085D2333C767004F3C09 /* 2-两数相加.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "2-两数相加.hpp"; sourceTree = "<group>"; };
 		1262AC80267B97B000859AFB /* 9-回文数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "9-回文数.hpp"; sourceTree = "<group>"; };
+		126AF130268A0E7200641FC1 /* 12-整数转罗马数字.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "12-整数转罗马数字.hpp"; sourceTree = "<group>"; };
 		1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-Z 字形变换.hpp"; sourceTree = "<group>"; };
 		129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "11-盛最多水的容器.hpp"; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		124F1E67232A8F9A00E7C090 /* 09、哈希表 */ = {
 			isa = PBXGroup;
 			children = (
+				126AF130268A0E7200641FC1 /* 12-整数转罗马数字.hpp */,
 			);
 			path = "09、哈希表";
 			sourceTree = "<group>";
@@ -286,7 +288,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -346,7 +348,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
