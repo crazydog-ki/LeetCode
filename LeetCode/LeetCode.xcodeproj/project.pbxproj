@@ -36,6 +36,7 @@
 		1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		1284DB59268E1B81008692B8 /* 14-最长公共前缀.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "14-最长公共前缀.hpp"; sourceTree = "<group>"; };
 		12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-Z 字形变换.hpp"; sourceTree = "<group>"; };
+		1294DD952690AB5100C4D928 /* 15-三数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "15-三数之和.hpp"; sourceTree = "<group>"; };
 		129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "11-盛最多水的容器.hpp"; sourceTree = "<group>"; };
 		12A68119268B684900AE0499 /* 13-罗马数字转整数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "13-罗马数字转整数.hpp"; sourceTree = "<group>"; };
 		12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-最长回文子串.hpp"; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 			children = (
 				123A18E922F7C0C5007298AF /* 1-两数之和.hpp */,
 				124F1E71232A90EB00E7C090 /* 4-寻找两个有序数组的中位数.hpp */,
+				1294DD952690AB5100C4D928 /* 15-三数之和.hpp */,
 			);
 			path = "01、数组";
 			sourceTree = "<group>";
