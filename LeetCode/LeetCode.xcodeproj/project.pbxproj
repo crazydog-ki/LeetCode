@@ -34,6 +34,7 @@
 		1262AC80267B97B000859AFB /* 9-回文数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "9-回文数.hpp"; sourceTree = "<group>"; };
 		126AF130268A0E7200641FC1 /* 12-整数转罗马数字.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "12-整数转罗马数字.hpp"; sourceTree = "<group>"; };
 		127294A5269357E50007636D /* 16-最接近的三数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "16-最接近的三数之和.hpp"; sourceTree = "<group>"; };
+		127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "17-电话号码的字母组合.hpp"; sourceTree = "<group>"; };
 		1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		1284DB59268E1B81008692B8 /* 14-最长公共前缀.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "14-最长公共前缀.hpp"; sourceTree = "<group>"; };
 		12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-Z 字形变换.hpp"; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		124F1E6D232A902300E7C090 /* 13、dfs */ = {
 			isa = PBXGroup;
 			children = (
+				127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */,
 			);
 			path = "13、dfs";
 			sourceTree = "<group>";
