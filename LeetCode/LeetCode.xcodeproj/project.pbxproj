@@ -37,6 +37,7 @@
 		127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "17-电话号码的字母组合.hpp"; sourceTree = "<group>"; };
 		1273F5C2260CE018001C07B0 /* 3-无重复字符的最长子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "3-无重复字符的最长子串.hpp"; sourceTree = "<group>"; };
 		1284DB59268E1B81008692B8 /* 14-最长公共前缀.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "14-最长公共前缀.hpp"; sourceTree = "<group>"; };
+		1286E27D269752DF0087EAC4 /* 18-四数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "18-四数之和.hpp"; sourceTree = "<group>"; };
 		12871E35265FF877002D07DF /* 6-Z 字形变换.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "6-Z 字形变换.hpp"; sourceTree = "<group>"; };
 		1294DD952690AB5100C4D928 /* 15-三数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "15-三数之和.hpp"; sourceTree = "<group>"; };
 		129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "11-盛最多水的容器.hpp"; sourceTree = "<group>"; };
@@ -89,12 +90,10 @@
 				124F1E65232A8F4900E7C090 /* 08、图 */,
 				124F1E67232A8F9A00E7C090 /* 09、哈希表 */,
 				126E405226726EC30006274F /* 10、字符串 */,
-				124F1E6B232A8FF300E7C090 /* 11、排序 */,
-				124F1E6C232A900F00E7C090 /* 12、动态规划 */,
-				124F1E6D232A902300E7C090 /* 13、dfs */,
-				124F1E6E232A903F00E7C090 /* 14、bfs */,
-				124F1E6F232A905700E7C090 /* 15、贪心 */,
-				12F48243266D37D800E2885F /* 16、数学 */,
+				124F1E6C232A900F00E7C090 /* 11、动态规划 */,
+				124F1E6D232A902300E7C090 /* 12、回溯 */,
+				124F1E6F232A905700E7C090 /* 13、贪心 */,
+				12F48243266D37D800E2885F /* 14、数学 */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -106,6 +105,7 @@
 				124F1E71232A90EB00E7C090 /* 4-寻找两个有序数组的中位数.hpp */,
 				1294DD952690AB5100C4D928 /* 15-三数之和.hpp */,
 				127294A5269357E50007636D /* 16-最接近的三数之和.hpp */,
+				1286E27D269752DF0087EAC4 /* 18-四数之和.hpp */,
 			);
 			path = "01、数组";
 			sourceTree = "<group>";
@@ -155,42 +155,28 @@
 			path = "07、堆";
 			sourceTree = "<group>";
 		};
-		124F1E6B232A8FF300E7C090 /* 11、排序 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "11、排序";
-			sourceTree = "<group>";
-		};
-		124F1E6C232A900F00E7C090 /* 12、动态规划 */ = {
+		124F1E6C232A900F00E7C090 /* 11、动态规划 */ = {
 			isa = PBXGroup;
 			children = (
 				1214622A2682328A00D76A2A /* 10-正则表达式匹配.hpp */,
 			);
-			path = "12、动态规划";
+			path = "11、动态规划";
 			sourceTree = "<group>";
 		};
-		124F1E6D232A902300E7C090 /* 13、dfs */ = {
+		124F1E6D232A902300E7C090 /* 12、回溯 */ = {
 			isa = PBXGroup;
 			children = (
 				127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */,
 			);
-			path = "13、dfs";
+			path = "12、回溯";
 			sourceTree = "<group>";
 		};
-		124F1E6E232A903F00E7C090 /* 14、bfs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "14、bfs";
-			sourceTree = "<group>";
-		};
-		124F1E6F232A905700E7C090 /* 15、贪心 */ = {
+		124F1E6F232A905700E7C090 /* 13、贪心 */ = {
 			isa = PBXGroup;
 			children = (
 				129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */,
 			);
-			path = "15、贪心";
+			path = "13、贪心";
 			sourceTree = "<group>";
 		};
 		126E405226726EC30006274F /* 10、字符串 */ = {
@@ -219,13 +205,13 @@
 			path = "03、队列";
 			sourceTree = "<group>";
 		};
-		12F48243266D37D800E2885F /* 16、数学 */ = {
+		12F48243266D37D800E2885F /* 14、数学 */ = {
 			isa = PBXGroup;
 			children = (
 				12F48244266D37D800E2885F /* 7-整数反转.hpp */,
 				1262AC80267B97B000859AFB /* 9-回文数.hpp */,
 			);
-			path = "16、数学";
+			path = "14、数学";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
