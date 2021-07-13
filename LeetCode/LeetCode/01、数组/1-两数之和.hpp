@@ -10,11 +10,9 @@ using namespace std;
 #include "tools.h"
 
 /**两数之和
- 1. 给定一个整数数组nums和一个整数目标值target，请你在该数组中找出和为目标值的那两个整数，并返回它们的数组下标。
-
- 2. 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
- 
- 3. 你可以按任意顺序返回答案。
+1. 给定一个整数数组nums和一个整数目标值target，请你在该数组中找出和为目标值的那两个整数，并返回它们的数组下标。
+2. 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+3. 你可以按任意顺序返回答案。
  */
 #pragma mark - 方法1-两次遍历+哈希
 vector<int> twoSum1(vector<int>& nums, int target) {
@@ -57,10 +55,4 @@ vector<int> twoSum2(vector<int>& nums, int target) {
         myMap[nums[i]] = i;
     }
     return res;
-}
-
-void test() {
-    vector<int> nums = {3, 2, 4};
-    vector<int> res = twoSum2(nums, 6);
-    printVectors(res);
 }

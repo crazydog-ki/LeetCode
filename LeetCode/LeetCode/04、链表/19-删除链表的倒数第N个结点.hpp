@@ -10,14 +10,14 @@ using namespace std;
 #include <stack>
 
 /**
- 给你一个链表，删除链表的倒数第n个结点，并且返回链表的头结点。
- 进阶：你能尝试使用一趟扫描实现吗？
+给你一个链表，删除链表的倒数第n个结点，并且返回链表的头结点。
+进阶：你能尝试使用一趟扫描实现吗？
  
- 提示：
- （1）链表中结点的数目为 sz
- （2）1 <= sz <= 30
- （3）0 <= Node.val <= 100
- （4）1 <= n <= sz
+提示：
+1. 链表中结点的数目为 sz
+2. 1 <= sz <= 30
+3. 0 <= Node.val <= 100
+4. 1 <= n <= sz
  */
 
 #pragma mark - 方法1-两遍扫描
@@ -71,8 +71,4 @@ ListNode* removeNthFromEnd3(ListNode* head, int n) {
     ListNode* res = mask->next;
     delete mask;
     return res;
-}
-
-void test() {
-    
 }

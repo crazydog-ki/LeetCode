@@ -5,7 +5,11 @@
 #include <iostream>
 using namespace std;
 
-#include "19-删除链表的倒数第N个结点.hpp"
+#include "20-有效的括号.hpp"
+
+void test() {
+    
+}
 
 int main(int argc, const char * argv[]) {
     test();

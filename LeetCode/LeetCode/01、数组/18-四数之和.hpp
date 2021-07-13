@@ -9,13 +9,13 @@ using namespace std;
 #include "tools.h"
 
 /**四数之和
- 给定一个包含n个整数的数组nums和一个目标值target，判断nums中是否存在四个元素a，b，c和 d，使得a+b+c+d的值与target相等？找出所有满足条件且不重复的四元组。
- 注意：答案中不可以包含重复的四元组。
+给定一个包含n个整数的数组nums和一个目标值target，判断nums中是否存在四个元素a，b，c和 d，使得a+b+c+d的值与target相等？找出所有满足条件且不重复的四元组。
+注意：答案中不可以包含重复的四元组。
  
- 提示：
- （1）0 <= nums.length <= 200
- （2）-109 <= nums[i] <= 109
- （3）-109 <= target <= 109
+提示：
+1. 0 <= nums.length <= 200
+2. -109 <= nums[i] <= 109
+3. -109 <= target <= 109
  */
 
 #pragma mark - 方法1-双指针+排序
@@ -96,13 +96,4 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     int sum = 0;
     dfs(ret, item, 0, sum);
     return ret;
-}
-
-void test() {
-    vector<int> nums = {1, 0, -1, 0, -2, 2};
-    vector<vector<int>> ret = fourSum(nums, 0);
-    
-    for (int i = 0; i < ret.size(); i++) {
-        printVectors(ret[i]);
-    }
 }

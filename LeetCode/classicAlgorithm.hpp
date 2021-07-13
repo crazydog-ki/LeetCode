@@ -53,8 +53,3 @@ int findKthSmallest(vector<int> &nums, int k) {
     }
     return -1;
 }
-
-void test() {
-    vector<int> nums = {1, 2, 2, 8, 3, 5, 9, 9, 10, 11};
-    cout << findKthSmallest(nums, 4) << endl;
-}

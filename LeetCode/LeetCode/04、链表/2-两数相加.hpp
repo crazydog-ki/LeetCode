@@ -9,9 +9,9 @@ using namespace std;
 #include "tools.h"
 
 /**两数相加
- 1. 两个非空的链表，表示两个非负整数。它们每位数字都是按照逆序方式存储的，并且每个节点只能存储一位数字。
- 2. 请你将两个数相加，并以相同形式返回一个表示和的链表。
- 3. 你可以假设除了数字0之外，这两个数都不会以0开头。
+1. 两个非空的链表，表示两个非负整数。它们每位数字都是按照逆序方式存储的，并且每个节点只能存储一位数字。
+2. 请你将两个数相加，并以相同形式返回一个表示和的链表。
+3. 你可以假设除了数字0之外，这两个数都不会以0开头。
  */
 #pragma mark - 方法1-短链对齐补零
 ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
@@ -74,21 +74,4 @@ ListNode* addTwoNumbers2(ListNode* l1, ListNode* l2) {
     }
     
     return resPtr->next;
-}
-
-void test() {
-    ListNode *l1 = new ListNode(2);
-    ListNode *l2 = new ListNode(4);
-    ListNode *l3 = new ListNode(3);
-    l1->next = l2;
-    l2->next = l3;
-    
-    ListNode *l4 = new ListNode(5);
-    ListNode *l5 = new ListNode(6);
-    ListNode *l6 = new ListNode(9);
-    l4->next = l5;
-    l5->next = l6;
-    
-    ListNode *resPtr = addTwoNumbers2(l1, l4);
-    printNode(resPtr);
 }

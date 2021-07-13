@@ -9,10 +9,11 @@ using namespace std;
 #include <vector>
 
 /**最长回文子串
- 给你一个字符串s，找到s中最长的回文子串。
- 提示：
- （1）1 <= s.length <= 1000
- （2）s仅由数字和英文字母（大写和/或小写）组成
+给你一个字符串s，找到s中最长的回文子串。
+ 
+提示：
+1. 1 <= s.length <= 1000
+2. s仅由数字和英文字母（大写和/或小写）组成
  */
 #pragma mark - 方法1-中心扩散
 string centerSpread(string s, int left, int right) {
@@ -200,11 +201,4 @@ string longestPalindrome5(string s) {
     }
     
     return s.substr(startIndex, maxLen);
-}
-
-void test() {
-    // 中心点为1个
-    // cout << longestPalindrome("adbdl") << endl;
-    // 中心点为2个
-    cout << longestPalindrome5("cbbd") << endl;
 }

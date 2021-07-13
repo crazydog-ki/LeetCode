@@ -9,7 +9,7 @@ using namespace std;
 #include <string>
 
 /**Z 字形变换
- 将一个给定字符串s根据给定的行数numRows，以从上往下、从左到右进行Z字形排列。
+将一个给定字符串s根据给定的行数numRows，以从上往下、从左到右进行Z字形排列。
  */
 #pragma mark - 方法1-按行排序
 string convert1(string s, int numRows) {
@@ -48,9 +48,4 @@ string convert2(string s, int numRows) {
         }
     }
     return ret;
-}
-
-void test() {
-    cout << convert2("AB", 1) << endl;
-    cout << convert2("PAYPALISHIRING", 3) << endl;
 }

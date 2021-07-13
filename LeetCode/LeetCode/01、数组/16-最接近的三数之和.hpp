@@ -9,13 +9,13 @@ using namespace std;
 #include "tools.h"
 
 /**最接近的三数之和
- 给定一个包括n个整数的数组nums和一个目标值target。找出nums中的三个整数，使得它们的和与
- target最接近。返回这三个数的和。假定每组输入只存在唯一答案。
+给定一个包括n个整数的数组nums和一个目标值target。找出nums中的三个整数，使得它们的和与
+target最接近。返回这三个数的和。假定每组输入只存在唯一答案。
  
- 提示：
- （1）3 <= nums.length <= 10^3
- （2）-10^3 <= nums[i] <= 10^3
- （3）-10^4 <= target <= 10^4
+提示：
+1. 3 <= nums.length <= 10^3
+2. -10^3 <= nums[i] <= 10^3
+3. -10^4 <= target <= 10^4
  */
 
 #pragma mark - 方法1-双指针+排序
@@ -43,9 +43,4 @@ int threeSumClosest(vector<int>& nums, int target) {
         
     }
     return (int)ret;
-}
-
-void test() {
-    vector<int> nums = {-1, 2, 1, -4};
-    cout << threeSumClosest(nums, 1) << endl;
 }

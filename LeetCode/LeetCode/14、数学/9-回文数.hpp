@@ -8,8 +8,8 @@ using namespace std;
 #include <string>
 
 /**回文数
- 给你一个整数x，如果x是一个回文整数，返回 true；否则，返回false。
- 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121是回文，而123不是。
+给你一个整数x，如果x是一个回文整数，返回 true；否则，返回false。
+回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121是回文，而123不是。
  */
 
 #pragma mark - 方法1-整数转字符串
@@ -66,9 +66,4 @@ bool isPalindrome(int x) {
         maxTen /= 100;
     }
     return true;
-}
-
-void test() {
-    cout << isPalindrome(123424321) << endl;
-    cout << isPalindrome(-121) << endl;
 }

@@ -9,12 +9,12 @@ using namespace std;
 #include "tools.h"
 
 /**三数之和
- 给你一个包含n个整数的数组nums，判断nums中是否存在三个元素a、b、c，使得a+b+c=0？请你找出所有和为0且不重复的三元组。
- 注意：答案中不可以包含重复的三元组。
+给你一个包含n个整数的数组nums，判断nums中是否存在三个元素a、b、c，使得a+b+c=0？请你找出所有和为0且不重复的三元组。
+注意：答案中不可以包含重复的三元组。
  
- 提示：
- （1）0 <= nums.length <= 3000
- （2）-105 <= nums[i] <= 105
+提示：
+1. 0 <= nums.length <= 3000
+2. -105 <= nums[i] <= 105
  */
 
 #pragma mark - 方法1-双指针+排序
@@ -45,12 +45,4 @@ vector<vector<int>> threeSum(vector<int>& nums) {
         }
     }
     return ret;
-}
-
-void test() {
-    vector<int> nums = {-1, 0, 1, 2, -1, -4};
-    vector<vector<int>> ret = threeSum(nums);
-    for (int i = 0; i < ret.size(); i++) {
-        printVectors(ret[i]);
-    }
 }

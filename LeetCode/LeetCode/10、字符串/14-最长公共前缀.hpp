@@ -9,14 +9,13 @@ using namespace std;
 #include <string>
 
 /**最长公共前缀
- 编写一个函数来查找字符串数组中的最长公共前缀。
- 如果不存在公共前缀，返回空字符串""。
+编写一个函数来查找字符串数组中的最长公共前缀。
+如果不存在公共前缀，返回空字符串""。
  
- 提示：
-
- （1）0 <= strs.length <= 200
- （2）0 <= strs[i].length <= 200
- （3）strs[i]仅由小写英文字母组成
+提示：
+1. 0 <= strs.length <= 200
+2. 0 <= strs[i].length <= 200
+3. strs[i]仅由小写英文字母组成
  */
 
 #pragma mark - 方法1-横向扫描
@@ -53,9 +52,4 @@ string longestCommonPrefix(vector<string>& strs) {
         }
     }
     return strs[0];
-}
-
-void test() {
-    vector<string> strs = {"flowers", "flight", "fly", "f"};
-    cout << longestCommonPrefix(strs) << endl;
 }

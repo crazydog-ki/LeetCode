@@ -9,14 +9,15 @@ using namespace std;
 #include "tools.h"
 
 /**寻找两个正序数组的中位数
- 给定两个大小分别为m和n的正序（从小到大）数组nums1和nums2。请你找出并返回这两个正序数组的中位数。
- 提示：
- （1）nums1.length == m
- （2）nums2.length == n
- （3）0 <= m <= 1000
- （4）0 <= n <= 1000
- （5）1 <= m + n <= 2000
- （6）-106 <= nums1[i], nums2[i] <= 106
+给定两个大小分别为m和n的正序（从小到大）数组nums1和nums2。请你找出并返回这两个正序数组的中位数。
+ 
+提示：
+1. nums1.length == m
+2. nums2.length == n
+3. 0 <= m <= 1000
+4. 0 <= n <= 1000
+5. 1 <= m + n <= 2000
+6. -106 <= nums1[i], nums2[i] <= 106
  */
 #pragma mark - 方法1-数组合并
 double findMedianSortedArrays1(vector<int>& nums1, vector<int>& nums2) {
@@ -128,10 +129,4 @@ double findMedianSortedArrays4(vector<int>& nums1, vector<int>& nums2) {
         }
     }
     return 0.0f;
-}
-
-void test() {
-    vector<int> nums1 = {1, 2, 5};
-    vector<int> nums2 = {3, 4, 6};
-    cout << findMedianSortedArrays4(nums1, nums2) << endl;
 }

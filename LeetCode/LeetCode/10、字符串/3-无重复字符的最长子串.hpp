@@ -12,7 +12,7 @@ using namespace std;
 #include "tools.h"
 
 /**无重复字符的最长子串
- 给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
+给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
  */
 #pragma mark - 方法1-哈希+滑动窗口
 int lengthOfLongestSubstring1(string s) {
@@ -57,9 +57,4 @@ int lengthOfLongestSubstring3(string s) {
         lookup[ch] = i;
     }
     return maxLen;
-}
-
-void test() {
-    string s("tmmzuxt");
-    cout << lengthOfLongestSubstring3(s) << endl;
 }
