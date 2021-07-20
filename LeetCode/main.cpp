@@ -5,10 +5,10 @@
 #include <iostream>
 using namespace std;
 
-#include "21-合并两个有序链表.hpp"
+#include "22-括号生成.hpp"
 
 void test() {
-    
+    generateParenthesis1(3);
 }
 
 int main(int argc, const char * argv[]) {

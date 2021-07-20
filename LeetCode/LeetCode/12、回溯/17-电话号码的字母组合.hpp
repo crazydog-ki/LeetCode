@@ -18,7 +18,7 @@ using namespace std;
 2. digits[i]是范围['2','9']的一个数字
  */
 
-#pragma mark - 方法1-dfs+哈希
+#pragma mark - 方法1-DFS+哈希
 map<char, string> myMap;
 void dfs(int depth,
          string& digits,

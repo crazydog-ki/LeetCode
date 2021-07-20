@@ -32,7 +32,7 @@ bool isMatch1(string s, string p) {
     } else return match && isMatch1(s.substr(1), p.substr(1));
 }
 
-#pragma mark - 方法2-dfs深度优先搜索
+#pragma mark - 方法2-DFS
 int sLen = 0;
 int pLen = 0;
 vector<vector<bool>> memo;
