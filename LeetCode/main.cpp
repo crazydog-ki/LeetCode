@@ -5,10 +5,9 @@
 #include <iostream>
 using namespace std;
 
-#include "22-括号生成.hpp"
+#include "23-合并K个升序链表.hpp"
 
 void test() {
-    generateParenthesis1(3);
 }
 
 int main(int argc, const char * argv[]) {
