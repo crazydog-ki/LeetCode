@@ -48,6 +48,7 @@
 		129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "11-盛最多水的容器.hpp"; sourceTree = "<group>"; };
 		12A68119268B684900AE0499 /* 13-罗马数字转整数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "13-罗马数字转整数.hpp"; sourceTree = "<group>"; };
 		12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-最长回文子串.hpp"; sourceTree = "<group>"; };
+		12CEAF7E26ADA89300CCF486 /* 24-两两交换链表中的节点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "24-两两交换链表中的节点.hpp"; sourceTree = "<group>"; };
 		12D5CF2722DC51F300CF17C4 /* tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		12F48244266D37D800E2885F /* 7-整数反转.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "7-整数反转.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +123,7 @@
 				123A27C1269C98C900EEAE37 /* 19-删除链表的倒数第N个结点.hpp */,
 				123A27C5269F40E900EEAE37 /* 21-合并两个有序链表.hpp */,
 				129A3AC026A7272E009BBFDC /* 23-合并K个升序链表.hpp */,
+				12CEAF7E26ADA89300CCF486 /* 24-两两交换链表中的节点.hpp */,
 			);
 			path = "04、链表";
 			sourceTree = "<group>";
