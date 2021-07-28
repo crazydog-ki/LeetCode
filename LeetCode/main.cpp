@@ -5,11 +5,11 @@
 #include <iostream>
 using namespace std;
 
-#include "26-删除有序数组中的重复项.hpp"
+#include "27-移除元素.hpp"
 
 void test() {
-    vector<int> nums = {0, 1, 1, 2, 3, 4, 4, 4};
-    int ret = removeDuplicates(nums);
+    vector<int> nums = {1, 1, 2, 3, 4, 4, 4};
+    int ret = removeElement(nums, 1);
     printVectors(nums);
     cout << ret << endl;
 }

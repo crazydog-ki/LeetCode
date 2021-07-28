@@ -28,6 +28,7 @@
 		1215668D22CB4A300067C003 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		12268FED26AF0AE10043DABF /* 25-K个一组翻转链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "25-K个一组翻转链表.hpp"; sourceTree = "<group>"; };
 		12268FEF26B1B2340043DABF /* 26-删除有序数组中的重复项.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "26-删除有序数组中的重复项.hpp"; sourceTree = "<group>"; };
+		12268FF126B1B8190043DABF /* 27-移除元素.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "27-移除元素.hpp"; sourceTree = "<group>"; };
 		123A18E922F7C0C5007298AF /* 1-两数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "1-两数之和.hpp"; sourceTree = "<group>"; };
 		123A27C1269C98C900EEAE37 /* 19-删除链表的倒数第N个结点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "19-删除链表的倒数第N个结点.hpp"; sourceTree = "<group>"; };
 		123A27C3269DEBA400EEAE37 /* 20-有效的括号.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "20-有效的括号.hpp"; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 				127294A5269357E50007636D /* 16-最接近的三数之和.hpp */,
 				1286E27D269752DF0087EAC4 /* 18-四数之和.hpp */,
 				12268FEF26B1B2340043DABF /* 26-删除有序数组中的重复项.hpp */,
+				12268FF126B1B8190043DABF /* 27-移除元素.hpp */,
 			);
 			path = "01、数组";
 			sourceTree = "<group>";
