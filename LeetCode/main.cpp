@@ -5,24 +5,13 @@
 #include <iostream>
 using namespace std;
 
-#include "25-K个一组翻转链表.hpp"
+#include "26-删除有序数组中的重复项.hpp"
 
 void test() {
-    ListNode* l1 = new ListNode(1);
-    ListNode* l2 = new ListNode(2);
-    ListNode* l3 = new ListNode(3);
-    ListNode* l4 = new ListNode(4);
-    ListNode* l5 = new ListNode(5);
-//    ListNode* l6 = new ListNode(6);
-//    ListNode* l7 = new ListNode(7);
-    l1->next = l2;
-    l2->next = l3;
-    l3->next = l4;
-    l4->next = l5;
-//    l5->next = l6;
-//    l6->next = l7;
-    ListNode* ret = reverseKGroup(l1, 3);
-    printNode(ret);
+    vector<int> nums = {0, 1, 1, 2, 3, 4, 4, 4};
+    int ret = removeDuplicates(nums);
+    printVectors(nums);
+    cout << ret << endl;
 }
 
 int main(int argc, const char * argv[]) {
