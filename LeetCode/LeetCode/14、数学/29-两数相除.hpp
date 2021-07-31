@@ -34,7 +34,7 @@ int divide1(int dividend, int divisor) {
 }
 
 #pragma mark - 方法2-递归
-int maxMinus(int a, int b) {
+int minusCount(int a, int b) {
     if (a < b) return 0;
     int ret = 1;
     int val = b;
@@ -42,9 +42,10 @@ int maxMinus(int a, int b) {
         ret += ret;
         val += val;
     }
-    return ret + maxMinus(a-val, b);
+    return ret + minusCount(a-val, b);
 }
 
+/// Note: INT_MIN = −2^31, INT_MAX = 2^31−1
 int divide(int dividend, int divisor) {
     if (dividend == 0) return 0;
     else if (divisor == 1) return dividend;
@@ -54,14 +55,15 @@ int divide(int dividend, int divisor) {
     int b = divisor;
     int ret = 0;
     bool isPositive = ((0<a && 0<b) || (a<0 && b<0));
-    if (b == INT_MIN) return (a==INT_MIN) ? 1 : 0;
-    if (a == INT_MIN) {
+    if (b == INT_MIN) return (a==INT_MIN) ? 1 : 0; // "除数"特殊情况
+    if (a == INT_MIN) { // "被除数"特殊情况，能确保-b有意义
         a = (isPositive) ? a-b : a+b;
         ++ret;
     }
+    // -a及-b能确保有意义
     a = (0<a) ? a : -a;
     b = (0<b) ? b : -b;
-    ret += maxMinus(a, b);
+    ret += minusCount(a, b);
     return isPositive ? ret : -ret;
 }
 
