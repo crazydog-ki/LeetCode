@@ -6,12 +6,10 @@
 using namespace std;
 #include "tools.h"
 
-#include "28-实现strStr().hpp"
+#include "29-两数相除.hpp"
 
 void test() {
-    string text = "ABABCABAA";
-    string pattren = "BA";
-    cout << strStr(text, pattren) << endl;
+    cout << divide(-12, 3) << endl;
 }
 
 int main(int argc, const char * argv[]) {

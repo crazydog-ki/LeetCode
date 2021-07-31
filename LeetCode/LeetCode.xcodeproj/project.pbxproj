@@ -34,6 +34,7 @@
 		123A27C1269C98C900EEAE37 /* 19-删除链表的倒数第N个结点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "19-删除链表的倒数第N个结点.hpp"; sourceTree = "<group>"; };
 		123A27C3269DEBA400EEAE37 /* 20-有效的括号.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "20-有效的括号.hpp"; sourceTree = "<group>"; };
 		123A27C5269F40E900EEAE37 /* 21-合并两个有序链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "21-合并两个有序链表.hpp"; sourceTree = "<group>"; };
+		124AC4CD26B5904300ECD2D2 /* 29-两数相除.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "29-两数相除.hpp"; sourceTree = "<group>"; };
 		124DA96F231EC05300723E56 /* classicAlgorithm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = classicAlgorithm.hpp; sourceTree = "<group>"; };
 		124F1E71232A90EB00E7C090 /* 4-寻找两个有序数组的中位数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "4-寻找两个有序数组的中位数.hpp"; sourceTree = "<group>"; };
 		125D7F2B26726FCB00BC6CD7 /* 8-字符串转换整数 (atoi).hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "8-字符串转换整数 (atoi).hpp"; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 			children = (
 				12F48244266D37D800E2885F /* 7-整数反转.hpp */,
 				1262AC80267B97B000859AFB /* 9-回文数.hpp */,
+				124AC4CD26B5904300ECD2D2 /* 29-两数相除.hpp */,
 			);
 			path = "14、数学";
 			sourceTree = "<group>";
