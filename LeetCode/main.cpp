@@ -4,14 +4,14 @@
 
 #include <iostream>
 using namespace std;
+#include "tools.h"
 
-#include "27-移除元素.hpp"
+#include "28-实现strStr().hpp"
 
 void test() {
-    vector<int> nums = {1, 1, 2, 3, 4, 4, 4};
-    int ret = removeElement(nums, 1);
-    printVectors(nums);
-    cout << ret << endl;
+    string text = "ABABCABAA";
+    string pattren = "BA";
+    cout << strStr(text, pattren) << endl;
 }
 
 int main(int argc, const char * argv[]) {

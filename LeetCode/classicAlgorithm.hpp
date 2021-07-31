@@ -53,3 +53,30 @@ int findKthSmallest(vector<int> &nums, int k) {
     }
     return -1;
 }
+
+#pragma mark - KMP算法
+int strStr(string text, string pattern) {
+    int tLen = (int)text.length();
+    int pLen = (int)pattern.length();
+    if (pLen == 0) return 0;
+    
+    vector<int> next(pLen, 0);
+    // 构建next表，最长公共前后缀
+    for (int i = 1, j = 0; i < pLen; i++) {
+        while (0<j && pattern[i]!=pattern[j]) j = next[j-1];
+        if (pattern[i] == pattern[j]) j++;
+        next[i] = j;
+    }
+    
+    // 匹配过程
+    for (int i = 0, j = 0; i < tLen; i++) {
+        while (0<j && text[i]!=pattern[j]) j = next[j-1];
+        if (text[i] == pattern[j]) j++;
+        if (j == pLen) {
+            return i-pLen+1;
+        }
+    }
+    return -1;
+}
+
+#pragma mark - 全排列

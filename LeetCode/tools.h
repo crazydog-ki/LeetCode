@@ -3,9 +3,10 @@
 // Github : https://github.com/crazydog-ki
 
 #include <vector>
+#include <string>
 
 #pragma mark - 数组
-void printVectors(vector<int> &nums) {
+void printVector(vector<int> &nums) {
     for (int i = 0; i < nums.size(); i++) {
         cout << nums[i] << ", ";
     }
