@@ -37,10 +37,10 @@ int sLen = 0;
 int pLen = 0;
 vector<vector<bool>> memo;
 bool dfs(string &s, string &p, int i, int j) {
-    // 已在cache缓存
+    /// 已在cache缓存
     if (!memo[i][j]) return false;
     
-    // 处理边界，dfs回溯出口
+    /// 处理边界，dfs回溯出口
     if (i==sLen) {
         memo[i][j] = (j==pLen) || (j+1<pLen&&p[j+1]=='*'&&dfs(s, p, i, j+2));
         return memo[i][j];
@@ -59,7 +59,7 @@ bool dfs(string &s, string &p, int i, int j) {
         }
     } else {
         if(j+1<pLen && p[j+1]=='*') {
-            memo[i][j] = dfs(s, p, i, j+2); // aba ac*ba
+            memo[i][j] = dfs(s, p, i, j+2); /// aba ac*ba
             return memo[i][j];
         } else {
             memo[i][j] = false;
@@ -72,7 +72,7 @@ bool isMatch2(string s, string p) {
     sLen = (int)s.length();
     pLen = (int)p.length();
     
-    // cache缓存
+    /// cache缓存
     memo = vector<vector<bool>>(sLen+1, vector<bool>(pLen+1, true));
     return dfs(s, p, 0, 0);
 }
@@ -87,14 +87,14 @@ bool isMatch3(string s, string p) {
     for (int j = 1; j <= pLen; j++) dp[0][j] = (p[j-1]=='*' && dp[0][j-2]);
     for (int i = 1; i <= sLen; i++) {
         for (int j = 1; j <= pLen; j++) {
-            // abbc abb.
+            /// abbc abb.
             if (s[i-1]==p[j-1] || p[j-1]=='.') dp[i][j] = dp[i-1][j-1];
             else if (p[j-1] == '*') {
                 if (s[i-1]==p[j-2] || p[j-2]=='.') {
-                    // abbc ab*c              abc ab*c        abbbc ab*c
+                    /// abbc ab*c              abc ab*c        abbbc ab*c
                     dp[i][j] = dp[i][j-2] || dp[i-1][j-2] || dp[i-1][j];
                 } else {
-                    // abbc abbcd*
+                    /// abbc abbcd*
                     dp[i][j] = dp[i][j-2];
                 }
             }

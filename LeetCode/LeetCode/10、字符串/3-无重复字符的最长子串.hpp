@@ -20,7 +20,7 @@ int lengthOfLongestSubstring1(string s) {
     int left = 0, maxLen = 0;
     unordered_set<char> lookup;
     for (int i = 0; i < len; i++) {
-        while (lookup.count(s[i])) { // 循环去重
+        while (lookup.count(s[i])) { /// 循环去重
             lookup.erase(s[left]);
             left++;
         }
@@ -36,7 +36,7 @@ int lengthOfLongestSubstring2(string s) {
     int left = 0, maxLen = 0;
     map<char, int> myMap;
     for (int i = 0; i < len; i++) {
-        if (myMap.count(s[i]) && left <= myMap[s[i]]) { // 一步跳去重
+        if (myMap.count(s[i]) && left <= myMap[s[i]]) { /// 一步跳去重
             left = myMap[s[i]]+1;
         }
         myMap[s[i]] = i;
@@ -52,7 +52,7 @@ int lengthOfLongestSubstring3(string s) {
     int *lookup = new int[128];
     for (int i = 0; i < len; i++) {
         char ch = s[i];
-        left = max(left, lookup[ch]+1); // 一步跳
+        left = max(left, lookup[ch]+1); /// 一步跳
         maxLen = max(maxLen, i-left+1);
         lookup[ch] = i;
     }

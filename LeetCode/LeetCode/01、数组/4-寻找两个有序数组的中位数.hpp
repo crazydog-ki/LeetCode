@@ -25,7 +25,7 @@ double findMedianSortedArrays1(vector<int>& nums1, vector<int>& nums2) {
     int n = (int)nums2.size();
     int i = 0, j = 0;
     
-    // 归并排序合并数组
+    /// 归并排序合并数组
     vector<int> mergedNums;
     while (i < m || j < n) {
         if (i<m && (n<=j || nums1[i]<=nums2[j])) {
@@ -37,7 +37,7 @@ double findMedianSortedArrays1(vector<int>& nums1, vector<int>& nums2) {
         }
     }
 
-    // 找到中位数
+    /// 找到中位数
     int count = (int)mergedNums.size();
     return count%2 ? mergedNums[(count-1)/2] :                                     (mergedNums[count/2-1]+mergedNums[count/2])/2.0;
 }
@@ -72,14 +72,14 @@ int getKth(vector<int>& nums1,
            int k) {
     int len1 = end1 - start1 + 1;
     int len2 = end2 - start2 + 1;
-    // 保证len1 < len2
+    /// 保证len1 < len2
     if (len2 < len1) return getKth(nums2, start2, end2, nums1, start1, end1, k);
     
-    // 处理边界问题
+    /// 处理边界问题
     if (0 == len1) return nums2[start2+k-1];
     if (1 == k) return min(nums1[start1], nums2[start2]);
     
-    // 考虑数组越界问题
+    /// 考虑数组越界问题
     int i = start1 + min(len1, k/2) - 1;
     int j = start2 + min(len2, k/2) - 1;
     if (nums1[i] < nums2[j]) {
@@ -101,20 +101,20 @@ double findMedianSortedArrays3(vector<int>& nums1, vector<int>& nums2) {
 double findMedianSortedArrays4(vector<int>& nums1, vector<int>& nums2) {
     int len1 = (int)nums1.size();
     int len2 = (int)nums2.size();
-    // 保证nums1为短数组
+    /// 保证nums1为短数组
     if (len2 < len1) return findMedianSortedArrays4(nums2, nums1);
     bool isOu = (len1+len2)%2 == 0;
     
-    // 针对nums1采用二分
+    /// 针对nums1采用二分
     int left = 0, right = len1;
     while (left <= right) {
-        // i+j = (len1-i)+(len2-j)+1，兼顾奇偶
+        /// i+j = (len1-i)+(len2-j)+1，兼顾奇偶
         int i = (left + right) / 2;
         int j = (len1+len2+1)/2 - i;
         
         if (i!=len1 && j!=0 && nums1[i]<nums2[j-1]) left = i+1;
         else if (i!=0 && j!=len2 && nums2[j]<nums1[i-1]) right = i-1;
-        else { // 找到中位数
+        else { /// 找到中位数
             int maxLeft = 0;
             if (i==0) maxLeft = nums2[j-1];
             else if (j==0) maxLeft = nums1[i-1];

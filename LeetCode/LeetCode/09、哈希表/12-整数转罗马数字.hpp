@@ -44,7 +44,7 @@ string intToRoman1(int num) {
 }
 
 #pragma mark - 方法2-哈希+贪心
-// 注：这里之所以称之为贪心，是因为每次num每次都会减去最大的值，直至为0
+/// 注：这里之所以称之为贪心，是因为每次num每次都会减去最大的值，直至为0
 string intToRoman(int num) {
     const pair<int, string> romanMap[] = {
         {1000, "M"},
@@ -63,7 +63,7 @@ string intToRoman(int num) {
     };
     
     string ret = "";
-    // 关键：遍历哈希表
+    /// 关键：遍历哈希表
     for (const auto &[val, symbol] : romanMap) {
         while (val <= num) {
             num -= val;

@@ -25,7 +25,7 @@ vector<int> findSubstring1(string s, vector<string>& words) {
     int wCount = (int)words.size();
     if (wCount == 0) return ret;
     
-    // 构建映射
+    /// 构建映射
     unordered_map<string, int> M, tmpM;
     for (string& word : words) M[word]++;
 
@@ -54,7 +54,7 @@ vector<int> findSubstring(string s, vector<string>& words) {
     int wCount = (int)words.size();
     if (wCount == 0) return ret;
     
-    // 构建映射
+    /// 构建映射
     unordered_map<string, int> M, tmpM;
     for (string& word : words) M[word]++;
 

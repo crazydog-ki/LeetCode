@@ -19,24 +19,24 @@ using namespace std;
 
 #pragma mark - 方法1-双指针+排序
 vector<vector<int>> threeSum(vector<int>& nums) {
-    // 排序
+    /// 排序
     sort(nums.begin(), nums.end());
     int count = (int)nums.size();
-    if (count<3 || 0<nums.front() || nums.back()<0) return {}; // 提前跳出
+    if (count<3 || 0<nums.front() || nums.back()<0) return {}; /// 提前跳出
     
     vector<vector<int>> ret = {};
     for (auto it = nums.begin(); it != nums.end(); it++) {
-        if (0 < *it) break; // 提前跳出
+        if (0 < *it) break; /// 提前跳出
         if (nums.begin()<it && *it==*(it-1)) continue;;
         auto l = it+1, r = nums.end()-1;
         while (l < r) {
-            if (0<*it+*l || *r<0) break; // 提前跳出
+            if (0<*it+*l || *r<0) break; /// 提前跳出
             
             if (*it+*l+*r < 0) l++;
             else if (0 < *it+*l+*r) r--;
             else {
                 ret.push_back({*it, *l, *r});
-                // 去重
+                /// 去重
                 while (l<r && *(l+1)==*l) l++;
                 while (l<r && *(r-1)==*r) r--;
                 l++;

@@ -72,7 +72,7 @@ int romanToInt1_2(string s) {
         {'X',   10},
         {'V',    5},
         {'I',    1},
-        {'\0',   0} // string数组越界会取该值
+        {'\0',   0} /// string数组越界会取该值
     };
     
     int sLen = (int)s.length(), ret = 0;

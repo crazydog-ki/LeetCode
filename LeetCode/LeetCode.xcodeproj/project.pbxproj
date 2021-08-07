@@ -53,6 +53,7 @@
 		129A3AC026A7272E009BBFDC /* 23-合并K个升序链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "23-合并K个升序链表.hpp"; sourceTree = "<group>"; };
 		129D08932688436000CF3320 /* 11-盛最多水的容器.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "11-盛最多水的容器.hpp"; sourceTree = "<group>"; };
 		12A68119268B684900AE0499 /* 13-罗马数字转整数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "13-罗马数字转整数.hpp"; sourceTree = "<group>"; };
+		12BBDCB026BEE31700B4F28F /* 31-下一个排列.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "31-下一个排列.hpp"; sourceTree = "<group>"; };
 		12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-最长回文子串.hpp"; sourceTree = "<group>"; };
 		12CEAF7E26ADA89300CCF486 /* 24-两两交换链表中的节点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "24-两两交换链表中的节点.hpp"; sourceTree = "<group>"; };
 		12D5CF2722DC51F300CF17C4 /* tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 				1286E27D269752DF0087EAC4 /* 18-四数之和.hpp */,
 				12268FEF26B1B2340043DABF /* 26-删除有序数组中的重复项.hpp */,
 				12268FF126B1B8190043DABF /* 27-移除元素.hpp */,
+				12BBDCB026BEE31700B4F28F /* 31-下一个排列.hpp */,
 			);
 			path = "01、数组";
 			sourceTree = "<group>";

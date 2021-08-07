@@ -15,7 +15,7 @@ int reverse(int x) {
         ret = ret*10+x%10;
         x /= 10;
     }
-    // 处理临界情况
+    /// 处理临界情况
     if (ret<INT_MIN || INT_MAX<ret) ret = 0;
     return (int)ret;
 }

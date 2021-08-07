@@ -22,14 +22,14 @@ int divide1(int dividend, int divisor) {
     long ret = 0, up = abs(dividend), down = abs(divisor);
     while (down <= up) {
         long count = 1, base = down;
-        while((base<<1) < up) { // 优化减法次数
+        while((base<<1) < up) { /// 优化减法次数
             count <<= 1;
             base <<= 1;
         }
         ret += count;
         up -= base;
     }
-    ret = ((dividend<0)^(divisor<0)) ? -ret : ret; // ^异或
+    ret = ((dividend<0)^(divisor<0)) ? -ret : ret; /// ^异或
     return (INT_MAX<ret || ret<INT_MIN) ? INT_MAX : (int)ret;
 }
 
@@ -55,12 +55,12 @@ int divide(int dividend, int divisor) {
     int b = divisor;
     int ret = 0;
     bool isPositive = ((0<a && 0<b) || (a<0 && b<0));
-    if (b == INT_MIN) return (a==INT_MIN) ? 1 : 0; // "除数"特殊情况
-    if (a == INT_MIN) { // "被除数"特殊情况，能确保-b有意义
+    if (b == INT_MIN) return (a==INT_MIN) ? 1 : 0; /// "除数"特殊情况
+    if (a == INT_MIN) { /// "被除数"特殊情况，能确保-b有意义
         a = (isPositive) ? a-b : a+b;
         ++ret;
     }
-    // -a及-b能确保有意义
+    /// -a及-b能确保有意义
     a = (0<a) ? a : -a;
     b = (0<b) ? b : -b;
     ret += minusCount(a, b);

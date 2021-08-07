@@ -27,7 +27,7 @@ vector<vector<int>> fourSum1(vector<int>& nums, int target) {
     
     for (int l = 0; l < count-3; l++) {
         if (0<l && nums[l]==nums[l-1]) continue;
-        // 剪枝
+        /// 剪枝
         if (target < nums[l]+nums[l+1]+nums[l+2]+nums[l+3]) break;
         if (nums[l]+nums[count-1]+nums[count-2]+nums[count-3] < target) continue;
         
@@ -39,7 +39,7 @@ vector<vector<int>> fourSum1(vector<int>& nums, int target) {
                 int sum = nums[l]+nums[i]+nums[j]+nums[r];
                 if (sum == target) {
                     ret.push_back({nums[l], nums[i], nums[j], nums[r]});
-                    // 去重
+                    /// 去重
                     while (i<j && nums[i+1]==nums[i]) i++;
                     while (i<j && nums[j-1]==nums[j]) j--;
                     i++; j--;
@@ -67,12 +67,12 @@ void dfs(vector<vector<int>>& ret,
         return;
     }
     
-    // 四个数排列组合
+    /// 四个数排列组合
     for (int i = start; i < numsOfSize; i++) {
-        // 去重
+        /// 去重
         if (start<i && myNums[i]==myNums[i-1]) continue;
         
-        // 剪枝
+        /// 剪枝
         if (numsOfSize-i < 4-itemSize) return;
         if (i+1<numsOfSize && myTarget<sum+myNums[i]+(3-itemSize)*myNums[i+1]) return;
         if (i+1<numsOfSize && sum+myNums[i]+(3-itemSize)*myNums[numsOfSize-1]<myTarget) continue;

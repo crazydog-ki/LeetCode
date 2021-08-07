@@ -57,13 +57,13 @@ vector<string> generateParenthesis2(int n) {
     vector<string> dp0;
     dp0.push_back("");
     dp[0] = dp0;
-    for (int i = 1; i <= n; i++) { // 求dp[n]
+    for (int i = 1; i <= n; i++) { /// 求dp[n]
         vector<string> cur;
         for (int m = 0; m < i; m++) {
             int k = i-1-m;
             vector<string> str1 = dp[m];
             vector<string> str2 = dp[k];
-            for (string& s1: str1) { // 遍历dp[m]和dp[k]所有情况
+            for (string& s1: str1) { /// 遍历dp[m]和dp[k]所有情况
                 for (string& s2: str2) {
                     cur.push_back("("+s1+")"+s2);
                 }

@@ -6,13 +6,12 @@
 using namespace std;
 #include "tools.h"
 
-#include "30-串联所有单词的子串.hpp"
+#include "31-下一个排列.hpp"
 
 void test() {
-    string s = "barfoofoobar";
-    vector<string> words = {"bar", "foo"};
-    vector<int> ret = findSubstring(s, words);
-    printVector(ret);
+    vector<int> nums = {1, 3, 5, 4, 2};
+    nextPermutation(nums);
+    printVector(nums);
 }
 
 int main(int argc, const char * argv[]) {

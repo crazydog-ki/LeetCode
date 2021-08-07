@@ -23,7 +23,7 @@ int threeSumClosest(vector<int>& nums, int target) {
     sort(nums.begin(), nums.end());
     
     int count = (int)nums.size();
-    int ret = 1e4; // 10^4，三数之和不会超过10^4
+    int ret = 1e4; /// 10^4，三数之和不会超过10^4
     for (int i = 0; i < count; i++) {
         if (0<i && nums[i]==nums[i-1]) continue;
         int l = i+1, r = count-1;

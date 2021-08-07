@@ -13,15 +13,15 @@ using namespace std;
  */
 #pragma mark - 方法1-按行排序
 string convert1(string s, int numRows) {
-    // 处理临界情况
+    /// 处理临界情况
     if (numRows == 1) return s;
     
     int len = (int)s.length();
     int curRow = 0, reversed = -1;
-    vector<string> rowStrings(min(numRows, len)); // 存储每一行数据
+    vector<string> rowStrings(min(numRows, len)); /// 存储每一行数据
     for (char ch : s) {
         if (curRow == 0 || curRow == numRows-1) reversed = -reversed;
-        rowStrings[curRow] += ch; // 每个字符编上对应行号
+        rowStrings[curRow] += ch; /// 每个字符编上对应行号
         curRow += reversed;
     }
     
@@ -38,10 +38,10 @@ string convert2(string s, int numRows) {
     int delta = 2*numRows-2;
     string ret = "";
     for (int i = 0; i < numRows; i++) {
-        // 找某行对应的数学关系
+        /// 找某行对应的数学关系
         for (int j = 0; i+j < len; j += delta) {
             ret += s[i+j];
-            // 中间行数
+            /// 中间行数
             if (i!=0 && i!=numRows-1 && j+delta-i<len) {
                 ret += s[j+delta-i];
             }

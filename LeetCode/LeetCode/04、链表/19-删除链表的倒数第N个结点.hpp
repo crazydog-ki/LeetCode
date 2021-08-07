@@ -45,7 +45,7 @@ ListNode* removeNthFromEnd2(ListNode* head, int n) {
     ListNode* front = head;
     ListNode* back = head;
     while (n--) front = front->next;
-    // 删除首节点的场景
+    /// 删除首节点的场景
     if (!front) return head->next;
     while (front->next) {
         front = front->next;

@@ -18,7 +18,7 @@ ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
     int len1 = 1, len2 = 1;
     ListNode *ptr1 = l1, *ptr2 = l2;
     
-    // 获取链表长度
+    /// 获取链表长度
     while (ptr1->next) {
         len1++;
         ptr1 = ptr1->next;
@@ -28,7 +28,7 @@ ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
         ptr2 = ptr2->next;
     }
     
-    // 短链末尾补零
+    /// 短链末尾补零
     int delta = (len1 <= len2) ? len2-len1 : len1-len2;
     ListNode *tmpPtr = (len1 <= len2) ? ptr1 : ptr2;
     while (delta--) {
@@ -36,14 +36,14 @@ ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
         tmpPtr = tmpPtr->next;
     }
     
-    // 指针复位
+    /// 指针复位
     ptr1 = l1;
     ptr2 = l2;
     
     ListNode *resPtr = new ListNode(-1);
     ListNode *curPtr = resPtr;
-    int count = 0; // 记录进位, 1代表进位, 0代表不进位
-    int sum = 0; // 记录相加结果
+    int count = 0; /// 记录进位, 1代表进位, 0代表不进位
+    int sum = 0; /// 记录相加结果
     while (ptr1 && ptr2) {
         sum = count + ptr1->val + ptr2->val;
         curPtr->next = new ListNode(sum % 10);
@@ -53,7 +53,7 @@ ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
         count = (9<sum) ? 1 : 0;
     }
     
-    if (count) { // 最后还有进位
+    if (count) { /// 最后还有进位
         curPtr->next = new ListNode(1);
         curPtr = curPtr->next;
     }
@@ -70,7 +70,7 @@ ListNode* addTwoNumbers2(ListNode* l1, ListNode* l2) {
         if (l1) {carry += l1->val; l1 = l1->next;}
         if (l2) {carry += l2->val; l2 = l2->next;}
         curPtr = curPtr->next = new ListNode(carry % 10);
-        carry /= 10; // 记录进位
+        carry /= 10; /// 记录进位
     }
     
     return resPtr->next;

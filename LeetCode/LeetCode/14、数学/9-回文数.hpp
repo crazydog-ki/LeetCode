@@ -40,7 +40,7 @@ bool isPalindrome2(int x) {
 
 #pragma mark - 方法3-反转一半数字
 bool isPalindrome3(int x) {
-    // 处理临界情况
+    /// 处理临界情况
     if (x<0 || (0<x && x%10==0)) return false;
     
     int ret = 0;
@@ -62,7 +62,7 @@ bool isPalindrome(int x) {
         int left = x/maxTen;
         int right = x%10;
         if (left != right) return false;
-        x = (x%maxTen) / 10; // 首尾相等，需去除
+        x = (x%maxTen) / 10; /// 首尾相等，需去除
         maxTen /= 100;
     }
     return true;

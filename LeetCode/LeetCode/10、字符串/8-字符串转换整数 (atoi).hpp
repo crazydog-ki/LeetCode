@@ -26,10 +26,10 @@ int myAtoi(string s) {
     int len = (int)s.length();
     int idx = 0;
     
-    // 前导空格
+    /// 前导空格
     while (idx<len && s[idx]==' ') idx++;
     
-    // 正负号
+    /// 正负号
     int flag = 1;
     if (s[idx] == '+') {
         idx++;
@@ -38,11 +38,11 @@ int myAtoi(string s) {
         flag = -1;
     }
     
-    // 数字
+    /// 数字
     long ret = 0;
     while (idx < len && isdigit(s[idx])) {
         ret = ret*10+(s[idx]-'0');
-        // 处理临界
+        /// 处理临界
         if (flag*ret<=INT_MIN || INT_MAX<=flag*ret) return 0<flag ? INT_MAX : INT_MIN;
         idx++;
     }

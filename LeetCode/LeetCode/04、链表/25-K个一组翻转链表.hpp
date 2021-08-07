@@ -75,7 +75,7 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode* nex = nullptr;
         if (tail) {
             nex = tail->next;
-            tail->next = nullptr; // 置为空，才能反转链表
+            tail->next = nullptr; /// 置为空，才能反转链表
         }
         
         guard->next = reverseOneList(cur);
@@ -83,6 +83,6 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         cur = nex;
         tail = nex;
     }
-    // delete guard;
+    /// delete guard;
     return ret->next;
 }

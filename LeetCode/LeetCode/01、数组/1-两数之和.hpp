@@ -19,17 +19,17 @@ vector<int> twoSum1(vector<int>& nums, int target) {
     int count = (int)nums.size();
     if (count < 2) return {};
     
-    vector<int> res(2, -1); // 只有两个元素
-    // 1、构造 myMap[value]=index
+    vector<int> res(2, -1); /// 只有两个元素
+    /// 1、构造 myMap[value]=index
     map<int, int> myMap;
     for (int i = 0; i < count; i++) {
         myMap[nums[i]] = i;
     }
     
-    // 2、遍历数组，找到结果提前跳出
+    /// 2、遍历数组，找到结果提前跳出
     for (int i = 0; i < count; i++) {
         int key = target - nums[i];
-        if (myMap.count(key) && myMap[key]!=i) { // 元素重复
+        if (myMap.count(key) && myMap[key]!=i) { /// 元素重复
             res[0] = myMap[key];
             res[1] = i;
             break;

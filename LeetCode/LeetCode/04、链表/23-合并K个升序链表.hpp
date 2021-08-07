@@ -22,33 +22,35 @@ using namespace std;
  */
 
 #pragma mark - 方法1-暴力法+两两合并
-//ListNode* mergeTwoLists(ListNode* one, ListNode* two) {
-//    ListNode* concat = new ListNode(-1);
-//    ListNode* cur = concat;
-//    while (one || two) {
-//        if (!one) {
-//            cur->next = two;
-//            break;
-//        }
-//
-//        if (!two) {
-//            cur->next = one;
-//            break;
-//        }
-//
-//        if (one->val < two->val) {
-//            cur->next = one;
-//            one = one->next;
-//        } else {
-//            cur->next = two;
-//            two = two->next;
-//        }
-//        cur = cur->next;
-//    }
-//    ListNode* ret = concat->next;
-//    delete concat;
-//    return ret;
-//}
+/**
+ ListNode* mergeTwoLists(ListNode* one, ListNode* two) {
+     ListNode* concat = new ListNode(-1);
+     ListNode* cur = concat;
+     while (one || two) {
+         if (!one) {
+             cur->next = two;
+             break;
+         }
+
+         if (!two) {
+             cur->next = one;
+             break;
+         }
+
+         if (one->val < two->val) {
+             cur->next = one;
+             one = one->next;
+         } else {
+             cur->next = two;
+             two = two->next;
+         }
+         cur = cur->next;
+     }
+     ListNode* ret = concat->next;
+     delete concat;
+     return ret;
+ }
+ */
 
 ListNode* mergeTwoLists(ListNode* one, ListNode* two) {
     if (!one) return two;

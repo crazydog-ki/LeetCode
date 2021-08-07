@@ -22,12 +22,12 @@ using namespace std;
 string longestCommonPrefix1(vector<string>& strs) {
     int size = (int)strs.size();
     if(size == 0) return "";
-    // ret取strs[0]作为原始的字符串，作为返回结果，对其进行删除尾部
+    /// ret取strs[0]作为原始的字符串，作为返回结果，对其进行删除尾部
     string ret = strs[0];
     for(int i = 1; i < size; i++) {
         for(int j = 0; j < ret.size(); j++) {
             if(strs[i][j] != ret[j]) {
-                ret.assign(ret, 0, j); // 这里可只记录索引
+                ret.assign(ret, 0, j); /// 这里可只记录索引
                 break;
             }
         }
@@ -43,8 +43,8 @@ string longestCommonPrefix(vector<string>& strs) {
     int count = (int)strs.size();
     int len = (int)strs[0].length();
     for (int i = 0; i < len; i++) {
-        char ch = strs[0][i]; // 第0个字符串第i列
-        // 遍历所有字符串的第i列
+        char ch = strs[0][i]; /// 第0个字符串第i列
+        /// 遍历所有字符串的第i列
         for (int j = 1; j < count; j++) {
             if (i==strs[j].size() || strs[j][i] != ch) {
                 return strs[0].substr(0, i);
