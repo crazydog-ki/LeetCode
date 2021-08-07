@@ -6,10 +6,13 @@
 using namespace std;
 #include "tools.h"
 
-#include "29-两数相除.hpp"
+#include "30-串联所有单词的子串.hpp"
 
 void test() {
-    cout << divide(-12, 3) << endl;
+    string s = "barfoofoobar";
+    vector<string> words = {"bar", "foo"};
+    vector<int> ret = findSubstring(s, words);
+    printVector(ret);
 }
 
 int main(int argc, const char * argv[]) {

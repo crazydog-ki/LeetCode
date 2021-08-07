@@ -55,7 +55,7 @@ int findKthSmallest(vector<int> &nums, int k) {
 }
 
 #pragma mark - KMP算法
-int strStr(string text, string pattern) {
+int kmpMatch(string text, string pattern) {
     int tLen = (int)text.length();
     int pLen = (int)pattern.length();
     if (pLen == 0) return 0;
