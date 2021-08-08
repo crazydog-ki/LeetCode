@@ -17,7 +17,7 @@ using namespace std;
 3. 0 <= m <= 1000
 4. 0 <= n <= 1000
 5. 1 <= m + n <= 2000
-6. -106 <= nums1[i], nums2[i] <= 106
+6. -106 <= nums1[i]， nums2[i] <= 106
  */
 #pragma mark - 方法1-数组合并
 double findMedianSortedArrays1(vector<int>& nums1, vector<int>& nums2) {

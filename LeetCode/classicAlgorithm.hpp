@@ -30,7 +30,7 @@ void quickSort(vector<int> &nums, int lo, int hi) {
     quickSort(nums, mi+1, hi);
 }
 
-#pragma mark - K-Selection, 以选择第K小的数为例
+#pragma mark - K-Selection 以选择第K小的数为例
 int selectPivot(vector<int> &nums, int lo, int hi) {
     swap(nums[lo], nums[(lo+hi)/2]); /// 随机确定轴点
     int pivot = nums[lo];

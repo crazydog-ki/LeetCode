@@ -42,7 +42,7 @@ ListNode* addTwoNumbers1(ListNode* l1, ListNode* l2) {
     
     ListNode *resPtr = new ListNode(-1);
     ListNode *curPtr = resPtr;
-    int count = 0; /// 记录进位, 1代表进位, 0代表不进位
+    int count = 0; /// 记录进位，1代表进位，0代表不进位
     int sum = 0; /// 记录相加结果
     while (ptr1 && ptr2) {
         sum = count + ptr1->val + ptr2->val;

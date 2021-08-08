@@ -17,7 +17,7 @@ using namespace std;
 2. 对于本题而言，当needle是空字符串时我们应当返回0。这与C语言的strstr()以及Java 的indexOf()定义相符。
  
 提示：
-1. 0 <= haystack.length, needle.length <= 5*104
+1. 0 <= haystack.length， needle.length <= 5*104
 2. haystack和needle仅由小写英文字符组成
  */
 #pragma mark - 方法1-暴力解法

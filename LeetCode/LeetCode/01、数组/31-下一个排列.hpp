@@ -33,6 +33,6 @@ void nextPermutation(vector<int>& nums) {
         swap(nums[l], nums[r]);
     }
     
-    /// 尾部部分按升序排列
+    /// 尾部按升序排列
     sort(nums.begin()+l+1, nums.end());
 }

@@ -26,6 +26,7 @@
 		1214622A2682328A00D76A2A /* 10-正则表达式匹配.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "10-正则表达式匹配.hpp"; sourceTree = "<group>"; };
 		1215668A22CB4A300067C003 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215668D22CB4A300067C003 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		122143EA26BFB889005AB9F5 /* 32-最长有效括号.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "32-最长有效括号.hpp"; sourceTree = "<group>"; };
 		12268FED26AF0AE10043DABF /* 25-K个一组翻转链表.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "25-K个一组翻转链表.hpp"; sourceTree = "<group>"; };
 		12268FEF26B1B2340043DABF /* 26-删除有序数组中的重复项.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "26-删除有序数组中的重复项.hpp"; sourceTree = "<group>"; };
 		12268FF126B1B8190043DABF /* 27-移除元素.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "27-移除元素.hpp"; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 			children = (
 				1214622A2682328A00D76A2A /* 10-正则表达式匹配.hpp */,
 				129A3ABE26A32DC4009BBFDC /* 22-括号生成.hpp */,
+				122143EA26BFB889005AB9F5 /* 32-最长有效括号.hpp */,
 			);
 			path = "11、动态规划";
 			sourceTree = "<group>";
