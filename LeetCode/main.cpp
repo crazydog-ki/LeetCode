@@ -6,11 +6,11 @@
 using namespace std;
 #include "tools.h"
 
-#include "32-最长有效括号.hpp"
+#include "33-搜索旋转排序数组.hpp"
 
 void test() {
-    string s = "(((()))())";
-    cout << longestValidParentheses(s) << endl;
+    vector<int> nums = {1, 3};
+    cout << search(nums, 3) << endl;
 }
 
 int main(int argc, const char * argv[]) {
