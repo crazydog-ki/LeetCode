@@ -33,6 +33,7 @@
 		12268FF326B303010043DABF /* 28-实现strStr().hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "28-实现strStr().hpp"; sourceTree = "<group>"; };
 		123465D226C1823C00580526 /* 33-搜索旋转排序数组.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "33-搜索旋转排序数组.hpp"; sourceTree = "<group>"; };
 		123465D426C5769200580526 /* 34-在排序数组中查找元素的第一个和最后一个位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "34-在排序数组中查找元素的第一个和最后一个位置.hpp"; sourceTree = "<group>"; };
+		123465E226CD659B00580526 /* 35-搜索插入位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "35-搜索插入位置.hpp"; sourceTree = "<group>"; };
 		123A18E922F7C0C5007298AF /* 1-两数之和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "1-两数之和.hpp"; sourceTree = "<group>"; };
 		123A27C1269C98C900EEAE37 /* 19-删除链表的倒数第N个结点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "19-删除链表的倒数第N个结点.hpp"; sourceTree = "<group>"; };
 		123A27C3269DEBA400EEAE37 /* 20-有效的括号.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "20-有效的括号.hpp"; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 				12BBDCB026BEE31700B4F28F /* 31-下一个排列.hpp */,
 				123465D226C1823C00580526 /* 33-搜索旋转排序数组.hpp */,
 				123465D426C5769200580526 /* 34-在排序数组中查找元素的第一个和最后一个位置.hpp */,
+				123465E226CD659B00580526 /* 35-搜索插入位置.hpp */,
 			);
 			path = "01、数组";
 			sourceTree = "<group>";
