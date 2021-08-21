@@ -59,6 +59,7 @@
 		12A68119268B684900AE0499 /* 13-罗马数字转整数.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "13-罗马数字转整数.hpp"; sourceTree = "<group>"; };
 		12BBDCB026BEE31700B4F28F /* 31-下一个排列.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "31-下一个排列.hpp"; sourceTree = "<group>"; };
 		12C56F94232CC0D10059AB91 /* 5-最长回文子串.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "5-最长回文子串.hpp"; sourceTree = "<group>"; };
+		12CB1D4826CEAAC5002C488E /* 36-有效的数独.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "36-有效的数独.hpp"; sourceTree = "<group>"; };
 		12CEAF7E26ADA89300CCF486 /* 24-两两交换链表中的节点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "24-两两交换链表中的节点.hpp"; sourceTree = "<group>"; };
 		12D5CF2722DC51F300CF17C4 /* tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		12F48244266D37D800E2885F /* 7-整数反转.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "7-整数反转.hpp"; sourceTree = "<group>"; };
@@ -173,6 +174,7 @@
 				126AF130268A0E7200641FC1 /* 12-整数转罗马数字.hpp */,
 				12A68119268B684900AE0499 /* 13-罗马数字转整数.hpp */,
 				1280DA1B26B84872000F8D51 /* 30-串联所有单词的子串.hpp */,
+				12CB1D4826CEAAC5002C488E /* 36-有效的数独.hpp */,
 			);
 			path = "09、哈希表";
 			sourceTree = "<group>";
