@@ -63,6 +63,7 @@
 		12CEAF7E26ADA89300CCF486 /* 24-两两交换链表中的节点.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "24-两两交换链表中的节点.hpp"; sourceTree = "<group>"; };
 		12D5CF2722DC51F300CF17C4 /* tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		12F48244266D37D800E2885F /* 7-整数反转.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "7-整数反转.hpp"; sourceTree = "<group>"; };
+		12FB891B26D0F49700501CAF /* 37-解数独.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "37-解数独.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */,
+				12FB891B26D0F49700501CAF /* 37-解数独.hpp */,
 			);
 			path = "12、回溯";
 			sourceTree = "<group>";
