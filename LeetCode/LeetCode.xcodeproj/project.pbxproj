@@ -31,6 +31,7 @@
 		12268FEF26B1B2340043DABF /* 26-删除有序数组中的重复项.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "26-删除有序数组中的重复项.hpp"; sourceTree = "<group>"; };
 		12268FF126B1B8190043DABF /* 27-移除元素.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "27-移除元素.hpp"; sourceTree = "<group>"; };
 		12268FF326B303010043DABF /* 28-实现strStr().hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "28-实现strStr().hpp"; sourceTree = "<group>"; };
+		122FFD3D26D3F6330030B046 /* 38-外观数列.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "38-外观数列.hpp"; sourceTree = "<group>"; };
 		123465D226C1823C00580526 /* 33-搜索旋转排序数组.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "33-搜索旋转排序数组.hpp"; sourceTree = "<group>"; };
 		123465D426C5769200580526 /* 34-在排序数组中查找元素的第一个和最后一个位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "34-在排序数组中查找元素的第一个和最后一个位置.hpp"; sourceTree = "<group>"; };
 		123465E226CD659B00580526 /* 35-搜索插入位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "35-搜索插入位置.hpp"; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 				125D7F2B26726FCB00BC6CD7 /* 8-字符串转换整数 (atoi).hpp */,
 				1284DB59268E1B81008692B8 /* 14-最长公共前缀.hpp */,
 				12268FF326B303010043DABF /* 28-实现strStr().hpp */,
+				122FFD3D26D3F6330030B046 /* 38-外观数列.hpp */,
 			);
 			path = "10、字符串";
 			sourceTree = "<group>";
