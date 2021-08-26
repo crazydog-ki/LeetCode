@@ -6,10 +6,9 @@
 using namespace std;
 #include "tools.h"
 
-#include "38-外观数列.hpp"
+#include "39-组合总和.hpp"
 
 void test() {
-    cout << countAndSay(5) << endl;
 }
 
 int main(int argc, const char * argv[]) {
