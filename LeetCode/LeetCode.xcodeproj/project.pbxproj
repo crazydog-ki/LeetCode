@@ -33,6 +33,7 @@
 		12268FF326B303010043DABF /* 28-实现strStr().hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "28-实现strStr().hpp"; sourceTree = "<group>"; };
 		122FFD3D26D3F6330030B046 /* 38-外观数列.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "38-外观数列.hpp"; sourceTree = "<group>"; };
 		122FFD6226D6A07D0030B046 /* 39-组合总和.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "39-组合总和.hpp"; sourceTree = "<group>"; };
+		122FFD6426D801130030B046 /* 40-组合总和II.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "40-组合总和II.hpp"; sourceTree = "<group>"; };
 		123465D226C1823C00580526 /* 33-搜索旋转排序数组.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "33-搜索旋转排序数组.hpp"; sourceTree = "<group>"; };
 		123465D426C5769200580526 /* 34-在排序数组中查找元素的第一个和最后一个位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "34-在排序数组中查找元素的第一个和最后一个位置.hpp"; sourceTree = "<group>"; };
 		123465E226CD659B00580526 /* 35-搜索插入位置.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "35-搜索插入位置.hpp"; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 				127294A72695EE890007636D /* 17-电话号码的字母组合.hpp */,
 				12FB891B26D0F49700501CAF /* 37-解数独.hpp */,
 				122FFD6226D6A07D0030B046 /* 39-组合总和.hpp */,
+				122FFD6426D801130030B046 /* 40-组合总和II.hpp */,
 			);
 			path = "12、回溯";
 			sourceTree = "<group>";
