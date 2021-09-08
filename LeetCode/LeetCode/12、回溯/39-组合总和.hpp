@@ -7,7 +7,7 @@ using namespace std;
 
 #include <vector>
 
-/**
+/**组合总和
 给定一个无重复元素的正整数数组candidates和一个正整数target，找出candidates中所可以使数字和为目标数target的唯一组合。
  
 candidates中的数字可以无限制重复被选取。如果至少一个所选数字数量不同，则两种组合是唯一的。
