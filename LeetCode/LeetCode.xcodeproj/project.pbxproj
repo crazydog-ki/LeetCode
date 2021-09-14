@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		120B64CB26EA5DAB00F7F3E4 /* 42-接雨水.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "42-接雨水.hpp"; sourceTree = "<group>"; };
 		1214622A2682328A00D76A2A /* 10-正则表达式匹配.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "10-正则表达式匹配.hpp"; sourceTree = "<group>"; };
 		1215668A22CB4A300067C003 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215668D22CB4A300067C003 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -239,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				123A27C3269DEBA400EEAE37 /* 20-有效的括号.hpp */,
+				120B64CB26EA5DAB00F7F3E4 /* 42-接雨水.hpp */,
 			);
 			path = "02、栈";
 			sourceTree = "<group>";
