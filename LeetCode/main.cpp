@@ -6,9 +6,10 @@
 using namespace std;
 #include "tools.h"
 
-#include "42-接雨水.hpp"
+#include "43-字符串相乘.hpp"
 
 void test() {
+    cout << multiply2("123", "456") << endl;
 }
 
 int main(int argc, const char * argv[]) {

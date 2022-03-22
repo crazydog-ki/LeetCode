@@ -69,6 +69,7 @@
 		12D5CF2722DC51F300CF17C4 /* tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		12F48244266D37D800E2885F /* 7-整数反转.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "7-整数反转.hpp"; sourceTree = "<group>"; };
 		12FB891B26D0F49700501CAF /* 37-解数独.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "37-解数独.hpp"; sourceTree = "<group>"; };
+		7E20464127E0D2F800D299FB /* 43-字符串相乘.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "43-字符串相乘.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +107,12 @@
 			children = (
 				123A18E722F7C044007298AF /* 01、数组 */,
 				127B93B82314D37A007A1DBD /* 02、栈 */,
-				127D70B92320F70400350828 /* 03、队列 */,
+				7E20464D27E2246000D299FB /* 03、队列 */,
 				124F1E63232A8EFA00E7C090 /* 04、链表 */,
-				124F1E64232A8F3100E7C090 /* 05、二叉树 */,
-				124F1E66232A8F7400E7C090 /* 06、二叉搜索树 */,
-				124F1E69232A8FB600E7C090 /* 07、堆 */,
-				124F1E65232A8F4900E7C090 /* 08、图 */,
+				7E20463D27E0D20900D299FB /* 05、二叉树 */,
+				7E20463E27E0D23300D299FB /* 06、二叉搜索树 */,
+				7E20463F27E0D24400D299FB /* 07、堆 */,
+				7E20464027E0D25600D299FB /* 08、图 */,
 				124F1E67232A8F9A00E7C090 /* 09、哈希表 */,
 				126E405226726EC30006274F /* 10、字符串 */,
 				124F1E6C232A900F00E7C090 /* 11、动态规划 */,
@@ -153,27 +154,6 @@
 			path = "04、链表";
 			sourceTree = "<group>";
 		};
-		124F1E64232A8F3100E7C090 /* 05、二叉树 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "05、二叉树";
-			sourceTree = "<group>";
-		};
-		124F1E65232A8F4900E7C090 /* 08、图 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "08、图";
-			sourceTree = "<group>";
-		};
-		124F1E66232A8F7400E7C090 /* 06、二叉搜索树 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "06、二叉搜索树";
-			sourceTree = "<group>";
-		};
 		124F1E67232A8F9A00E7C090 /* 09、哈希表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,13 +164,6 @@
 				12B0183626E66DAD00086E64 /* 41-缺失的第一个正数.hpp */,
 			);
 			path = "09、哈希表";
-			sourceTree = "<group>";
-		};
-		124F1E69232A8FB600E7C090 /* 07、堆 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "07、堆";
 			sourceTree = "<group>";
 		};
 		124F1E6C232A900F00E7C090 /* 11、动态规划 */ = {
@@ -245,21 +218,51 @@
 			path = "02、栈";
 			sourceTree = "<group>";
 		};
-		127D70B92320F70400350828 /* 03、队列 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "03、队列";
-			sourceTree = "<group>";
-		};
 		12F48243266D37D800E2885F /* 14、数学 */ = {
 			isa = PBXGroup;
 			children = (
 				12F48244266D37D800E2885F /* 7-整数反转.hpp */,
 				1262AC80267B97B000859AFB /* 9-回文数.hpp */,
 				124AC4CD26B5904300ECD2D2 /* 29-两数相除.hpp */,
+				7E20464127E0D2F800D299FB /* 43-字符串相乘.hpp */,
 			);
 			path = "14、数学";
+			sourceTree = "<group>";
+		};
+		7E20463D27E0D20900D299FB /* 05、二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "05、二叉树";
+			sourceTree = "<group>";
+		};
+		7E20463E27E0D23300D299FB /* 06、二叉搜索树 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "06、二叉搜索树";
+			sourceTree = "<group>";
+		};
+		7E20463F27E0D24400D299FB /* 07、堆 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "07、堆";
+			path = "LeetCode/07、堆";
+			sourceTree = SOURCE_ROOT;
+		};
+		7E20464027E0D25600D299FB /* 08、图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "08、图";
+			sourceTree = "<group>";
+		};
+		7E20464D27E2246000D299FB /* 03、队列 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "03、队列";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
