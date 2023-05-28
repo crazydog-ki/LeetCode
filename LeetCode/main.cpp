@@ -6,13 +6,9 @@
 using namespace std;
 #include "tools.h"
 
-#include "43-字符串相乘.hpp"
-
-void test() {
-    cout << multiply2("123", "456") << endl;
-}
+#include "44-通配符匹配.hpp"
 
 int main(int argc, const char * argv[]) {
-    test();
+    cout << isMatch("aa", "*") << endl;
     return 0;
 }
