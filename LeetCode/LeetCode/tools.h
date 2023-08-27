@@ -38,7 +38,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-#pragma mark - tip1 => 字符串数字相互转化
+#pragma mark - 字符串数字相互转化
 /*
  字符串 => 数字
  1. string => int   : int stoi(string)
