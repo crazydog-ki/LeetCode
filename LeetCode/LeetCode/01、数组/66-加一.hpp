@@ -12,6 +12,7 @@ using namespace std;
  最高位数字存放在数组的首位，数组中每个元素只存储单个数字。
  你可以假设除了整数0之外，这个整数不会以零开头。
  **/
+#pragma mark - 方法1-常规
 vector<int> plusOne(vector<int>& digits) {
     int len = (int)digits.size();
     for (int i = len-1; 0 <= i; i--) {

@@ -8,7 +8,7 @@
 #include <unordered_map>
 using namespace std;
 
-#include "66-加一.hpp"
+#include "88-合并两个有序数组.hpp"
 
 int main(int argc, const char * argv[]) {
 //    vector<int> nums = {-2,1,-3,4,-1,2,1,-5,4};
@@ -25,7 +25,13 @@ int main(int argc, const char * argv[]) {
 //    l4->next = l5;
 //    l5->next = l6;
 //    l6->next = l7;
-    vector<int> nums = {9, 9, 8};
-    vector<int> ret = plusOne(nums);
+    
+//    vector<int> nums1 = {1,2,3,4,5,-1,-1,-1,-1,-1};
+//    vector<int> nums2 = {2,2,4,5,6};
+    
+    vector<int> nums1 = {2, 0};
+    vector<int> nums2 = {1};
+    
+    merge(nums1, 1, nums2, 1);
     return 0;
 }
